@@ -1,0 +1,76 @@
+/* ANWAY — mejoras.css
+   Cargalo DESPUÉS de styles.css:
+   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="mejoras.css">
+
+   Corrige: tamaños de texto, contraste, menú móvil y botón de WhatsApp. */
+
+:root {
+  --muted: #5A5F57;          /* gris con contraste AA sobre marfil */
+  --green-wa: #1FA855;
+}
+
+/* 1. Escala tipográfica: nada por debajo de 12px, cuerpo en 15-16px */
+body { font-size: 16px; }
+.eyebrow { font-size: 12px; }
+.brand-caption { font-size: 10px; }
+.main-nav a, .nav-cta, .button, .text-link, .card-link { font-size: 14px; }
+.hero-lead { font-size: 18px; }
+.hero-note { font-size: 13px; }
+.hero-footer, .art-topline, .art-bottomline, .art-label-small { font-size: 11px; }
+.floating-card { font-size: 12px; }
+.intro-text { font-size: 16px; color: #4F544C; }
+.intro-index { font-size: 11px; }
+.section-description { font-size: 15px; color: #4F544C; }
+.service-number { font-size: 12px; }
+.service-card h3 { font-size: 22px; }
+.service-card > p { font-size: 15px; color: #4F544C; max-width: 340px; }
+.service-card ul { font-size: 14px; color: #3F443D; }
+.project-meta { font-size: 11px; }
+.project-info > p { font-size: 15px; max-width: 420px; color: rgba(240,231,219,.8); }
+.project-tag { font-size: 12px; }
+.work .section-description { color: rgba(240,231,219,.8); }
+.work-disclaimer { font-size: 12px; color: rgba(240,231,219,.65); }
+.process-step h3 { font-size: 20px; }
+.process-step p { font-size: 15px; color: #4F544C; }
+.contact-copy > p:not(.eyebrow) { font-size: 16px; color: rgba(240,231,219,.82); }
+.contact-details small { font-size: 11px; }
+.contact-details b { font-size: 14px; }
+.panel-kicker { font-size: 11px; }
+.contact-panel > p { font-size: 14px; color: #55594F; }
+.back-top { font-size: 13px; }
+.footer-bottom { font-size: 11px; color: rgba(240,231,219,.7); }
+
+/* 2. Contraste */
+.eyebrow-dark { color: #4F5A52; }
+h2 span { color: #6B746B; }
+.step-no, .service-number { color: #666A60; }
+.hero-lead { color: rgba(240,231,219,.85); }
+.hero-footer { color: rgba(240,231,219,.7); }
+
+/* 3. Botón de WhatsApp (canal principal de contacto) */
+.button-wa { background: var(--green-wa); color: #fff; }
+.button-wa:hover { background: #178A45; color: #fff; }
+.contact-alt { margin: 14px 0 0; font-size: 13px; color: #55594F; text-align: center; }
+.contact-alt a { text-decoration: underline; }
+.contact-alt a:hover { color: var(--green); }
+/* .contact-alt es un <p> dentro de .contact-panel: gana la regla de arriba, fijala acá */
+.contact-panel > p.contact-alt { font-size: 13px; color: #55594F; }
+
+/* 4. Menú móvil: mantener navegación visible en una fila compacta */
+@media (max-width: 680px) {
+  .nav-wrap { flex-wrap: wrap; padding: 12px 0; }
+  .main-nav {
+    display: flex; order: 3; width: 100%; gap: 22px; margin: 0;
+    padding-top: 10px; border-top: 1px solid var(--line-light);
+    overflow-x: auto; white-space: nowrap;
+  }
+  .main-nav a { font-size: 13px; }
+  .hero-footer { font-size: 10px; }
+  .project-meta { font-size: 10px; }
+  .footer-bottom { font-size: 10px; }
+}
+
+/* 5. Botones y tarjetas con mejor foco/área táctil */
+.button, .nav-cta { min-height: 48px; }
+.service-card:hover { background: rgba(255,255,255,.28); transition: background .2s ease; }
