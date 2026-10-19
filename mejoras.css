@@ -16,9 +16,7 @@ body { font-size: 16px; }
 .brand-caption { font-size: 10px; }
 .main-nav a, .nav-cta, .button, .text-link, .card-link { font-size: 14px; }
 .hero-lead { font-size: 18px; }
-.hero-note { font-size: 13px; }
-.hero-footer, .art-topline, .art-bottomline, .art-label-small { font-size: 11px; }
-.floating-card { font-size: 12px; }
+.hero-footer { font-size: 11px; }
 .intro-text { font-size: 16px; color: #4F544C; }
 .intro-index { font-size: 11px; }
 .section-description { font-size: 15px; color: #4F544C; }
@@ -38,6 +36,20 @@ body { font-size: 16px; }
 .contact-details b { font-size: 14px; }
 .panel-kicker { font-size: 11px; }
 .contact-panel > p { font-size: 14px; color: #55594F; }
+/* Formulario de contacto (mailto:) — piso de 12px sobre los 9-11px de styles.css */
+.contact-form { gap: 15px; }
+.form-field { display: grid; gap: 6px; }
+.form-field label { font-size: 13px; font-weight: 700; }
+.form-field input, .form-field select, .form-field textarea { width: 100%; min-height: 46px; padding: 10px 11px; border: 1px solid #D6D0C4; border-radius: 0; background: rgba(255,255,255,.42); color: var(--green); font-size: 16px; }
+.form-field textarea { resize: vertical; min-height: 86px; }
+.form-field input::placeholder, .form-field textarea::placeholder { color: #6E7068; }
+.form-field select { cursor: pointer; }
+.form-note { margin: 0; font-size: 12px; line-height: 1.6; }
+
+/* Separador entre formulario y WhatsApp */
+.contact-divider { display: flex; align-items: center; gap: 12px; margin: 26px 0 16px; color: #6E7068; font-size: 12px; }
+.contact-divider::before, .contact-divider::after { flex: 1; content: ""; height: 1px; background: rgba(37, 45, 43, .16); }
+
 .back-top { font-size: 13px; }
 .footer-bottom { font-size: 11px; color: rgba(240,231,219,.7); }
 
