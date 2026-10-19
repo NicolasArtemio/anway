@@ -1,6 +1,6 @@
 # ANWAY — landing page
 
-Landing page responsive hecha con HTML semántico y CSS puro. No requiere JavaScript ni frameworks.
+Landing page responsive hecha con HTML semántico y CSS puro. Sin frameworks ni librerías externas: solo ~16 líneas de JavaScript nativo en el pie del documento, únicamente para que el formulario arme el mail y abra el cliente de correo.
 
 ## Archivos
 - `index.html`: estructura y contenido.

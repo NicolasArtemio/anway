@@ -227,8 +227,7 @@
           <span class="panel-kicker">CONTANOS TU IDEA</span>
           <h3>Empecemos por lo importante.</h3>
           <p>Completá el formulario y se abrirá tu aplicación de correo con el mensaje listo para enviar.</p>
-          <!-- Reemplazá contacto@tudominio.com por tu dirección real antes de publicar. -->
-          <form class="contact-form" action="mailto:contacto@tudominio.com" method="post" enctype="text/plain">
+          <form class="contact-form">
             <div class="form-field">
               <label for="nombre">Tu nombre</label>
               <input id="nombre" name="Nombre" type="text" autocomplete="name" placeholder="¿Cómo te llamás?" required>
@@ -279,5 +278,28 @@
       <span>HECHO CON INTENCIÓN <b>✳</b></span>
     </div>
   </footer>
+
+  <script>
+    // Reemplazá contacto@tudominio.com por tu dirección real antes de publicar.
+    var DESTINO = "contacto@tudominio.com";
+
+    document.querySelector(".contact-form").addEventListener("submit", function (evento) {
+      evento.preventDefault();
+      var datos = evento.target;
+      var asunto = "Consulta desde anwaycreativestudio.tech — " + datos.Servicio.value;
+      var cuerpo = [
+        "Nombre: " + datos.Nombre.value,
+        "Email: " + datos.Email.value,
+        "Servicio: " + datos.Servicio.value,
+        "",
+        datos.Mensaje.value || "(sin mensaje adicional)"
+      ].join("\n");
+
+      window.location.href =
+        "mailto:" + DESTINO +
+        "?subject=" + encodeURIComponent(asunto) +
+        "&body=" + encodeURIComponent(cuerpo);
+    });
+  </script>
 </body>
 </html>
