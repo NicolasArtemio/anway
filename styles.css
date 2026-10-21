@@ -84,12 +84,23 @@ h1 em, .work h2 em, .contact h2 em { color: var(--champagne); font-family: var(-
 .trust-item small { color: rgba(240,231,219,.68); font-size: 12px; line-height: 1.45; }
 
 
-.project-caption { display: flex; align-items: center; gap: 10px; width: max-content; max-width: 100%; margin: 22px 0 0 3%; padding: 12px 15px; border: 1px solid rgba(220,200,166,.28); background: rgba(37,45,43,.84); }
-.caption-dot { width: 7px; height: 7px; flex: 0 0 7px; border-radius: 50%; background: var(--champagne); }
-.project-caption strong, .project-caption small { display: block; }
-.project-caption strong { color: var(--ivory); font-size: 12px; font-weight: 600; }
-.project-caption small { margin-top: 3px; color: rgba(240,231,219,.7); font-size: 12px; }
-.caption-arrow { margin-left: 13px; color: var(--champagne); }
+/* Indicador de scroll de la intro de la notebook: sin caja, sin punto, sin flecha. */
+.project-caption { display: flex; flex-direction: column; align-items: center; width: max-content; max-width: 100%; margin: 22px auto 0; padding: 0; border: 0; background: none; text-align: center; }
+.caption-kicker { margin: 0; font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 15px; line-height: 1.4; letter-spacing: .01em; color: var(--champagne); }
+/* padding-left compensa el letter-spacing final para que la palabra quede centrada de verdad */
+.caption-cta { margin: 10px 0 0; padding-left: .38em; font-family: var(--sans); font-weight: 500; font-size: 11px; line-height: 1.4; letter-spacing: .38em; text-transform: uppercase; color: rgba(240,231,219,.7); }
+.caption-thread { --thread-h: 48px; --seg-h: 18px; position: relative; display: block; width: 1px; height: var(--thread-h); margin: 14px auto 0; overflow: hidden; background: rgba(220,200,166,.28); }
+.caption-thread::after { content: ""; position: absolute; top: 0; left: 0; width: 1px; height: var(--seg-h); background: linear-gradient(to bottom, rgba(220,200,166,0), var(--champagne) 55%, rgba(220,200,166,0)); animation: caption-thread 2.6s cubic-bezier(.65,0,.35,1) infinite; }
+@keyframes caption-thread { 0% { transform: translateY(calc(-1 * var(--seg-h))); opacity: 0; } 20% { opacity: 1; } 70% { opacity: 1; } 100% { transform: translateY(var(--thread-h)); opacity: 0; } }
+
+/* Con movimiento reducido el hilo queda quieto y centrado. */
+@media (prefers-reduced-motion: reduce) {
+  .caption-thread::after { animation: none; opacity: .85; transform: translateY(calc((var(--thread-h) - var(--seg-h)) / 2)); }
+}
+
+/* Barrita de progreso de la intro: se llena con el scroll del pin. */
+.has-laptop .stage-progress { position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; height: 2px; overflow: hidden; background: rgba(220,200,166,.12); }
+.stage-progress-fill { display: block; width: 100%; height: 100%; background: var(--champagne); transform: scaleX(0); transform-origin: left center; }
 .hero-art-disclaimer { max-width: 400px; margin: 12px 0 0 3%; color: rgba(240,231,219,.55); font-size: 12px; line-height: 1.5; }
 .hero-orb { position: absolute; border-radius: 50%; pointer-events: none; }
 .orb-one { width: 480px; height: 480px; top: -280px; right: 12%; border: 1px solid rgba(220, 200, 166, .08); }
@@ -283,6 +294,9 @@ h2 span { color: #8D958C; font-family: var(--serif); font-weight: 400; letter-sp
   .mock-house { height: 58px; }
   .hero-art-orb { width: 290px; height: 290px; }
   .project-caption { margin-top: 15px; }
+  .caption-kicker { font-size: 13px; }
+  .caption-cta { font-size: 10px; letter-spacing: .32em; padding-left: .32em; }
+  .caption-thread { --thread-h: 38px; --seg-h: 14px; margin-top: 11px; }
   .hero-footer { flex-wrap: wrap; gap: 10px; margin-top: 32px; font-size: 7px; }
   .hero-footer-right { width: 100%; margin: 8px 0 0; }
   .intro { padding: 76px 0 45px; }
@@ -565,7 +579,7 @@ h2 span { color: #6B746B; }
 .has-laptop .hero-stage { position: relative; height: calc(100vh - var(--hh, 88px)); height: calc(100svh - var(--hh, 88px)); min-height: 480px; overflow: hidden; }
 .has-laptop .laptop-intro { position: absolute; inset: 0; z-index: 2; display: block; }
 .laptop-intro canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-.has-laptop .project-caption { position: absolute; left: 50%; bottom: 30px; margin: 0; transform: translateX(-50%); }
+.has-laptop .project-caption { position: absolute; left: 50%; bottom: 30px; margin: 0; transform: translateX(-50%); z-index: 2; }
 .has-laptop .hero-main { position: absolute; inset: 0; z-index: 1; display: flex; flex-direction: column; justify-content: center; visibility: hidden; opacity: 0; contain: layout style; }
 .has-laptop .hero-main .hero-grid { padding-top: 0; }
 .has-laptop .hero-footer { position: static; width: min(var(--container), calc(100% - 64px)); margin: 40px auto 0; transform: none; }

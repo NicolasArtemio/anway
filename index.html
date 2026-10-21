@@ -50,7 +50,12 @@
       <div class="hero-stage">
         <div class="laptop-intro" aria-hidden="true">
           <canvas id="laptop-canvas"></canvas>
-          <div class="project-caption"><span class="caption-dot"></span><span><strong>Una idea toma forma</strong><small>Deslizá para descubrir ANWAY</small></span><span class="caption-arrow">↓</span></div>
+          <div class="project-caption">
+            <p class="caption-kicker">Una idea toma forma</p>
+            <p class="caption-cta">Deslizá</p>
+            <span class="caption-thread"></span>
+          </div>
+          <div class="stage-progress"><span class="stage-progress-fill"></span></div>
         </div>
         <div class="hero-main">
       <div class="container hero-grid">
@@ -287,6 +292,7 @@
 
       const stage = hero.querySelector(".hero-stage"), wrap = hero.querySelector(".laptop-intro");
       const canvas = wrap.querySelector("canvas"), main = hero.querySelector(".hero-main"), cap = wrap.querySelector(".project-caption");
+      const progressFill = wrap.querySelector(".stage-progress-fill");
       const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true, powerPreference: "high-performance" });
       renderer.outputColorSpace = THREE.SRGBColorSpace;
       renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 0.95;
@@ -418,7 +424,11 @@
       const setHH = function () { document.documentElement.style.setProperty("--hh", siteHeader.offsetHeight + "px"); };
       setHH(); new ResizeObserver(setHH).observe(siteHeader);
       const tl = gsap.timeline({
-        defaults: { ease: "none" }, onUpdate: function () { need = true; },
+        defaults: { ease: "none" },
+        onUpdate: function () {
+          need = true;
+          if (progressFill) progressFill.style.transform = "scaleX(" + this.progress() + ")";
+        },
         scrollTrigger: { trigger: hero, start: function () { return "top " + siteHeader.offsetHeight + "px"; }, end: "+=320%", pin: stage, scrub: 0.25, anticipatePin: 1, invalidateOnRefresh: true }
       });
       tl.to({}, { duration: 0.4 })
