@@ -10,13 +10,20 @@
   --champagne: #DCC8A6;
   --ivory: #F0E7DB;
   --paper: #F8F5EF;
-  --muted: #77776F;
+  --muted: #5A5F57;          /* gris con contraste AA sobre marfil */
+  --green-wa: #1FA855;       /* verde de WhatsApp */
   --line: rgba(37, 45, 43, .18);
   --line-light: rgba(240, 231, 219, .19);
   --serif: Georgia, "Times New Roman", serif;
   --sans: "DM Sans", Arial, sans-serif;
   --display: "Manrope", "DM Sans", sans-serif;
   --container: 1160px;
+  /* Animaciones */
+  --dur-entrance: 720ms;
+  --dur-scroll: 520ms;
+  --dur-hover: 180ms;
+  --ease: cubic-bezier(.2,.7,.2,1);
+  --shift: 20px;              /* desplazamiento sutil */
 }
 
 * { box-sizing: border-box; }
@@ -381,4 +388,206 @@ h2 span { color: #8D958C; font-family: var(--serif); font-weight: 400; letter-sp
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
+
+/* 1. Escala tipográfica: nada por debajo de 12px, cuerpo en 15-16px */
+body { font-size: 16px; }
+.eyebrow { font-size: 12px; }
+.brand-caption { font-size: 10px; }
+.main-nav a, .nav-cta, .button, .text-link, .card-link { font-size: 14px; }
+.hero-lead { font-size: 18px; }
+.hero-footer { font-size: 11px; }
+.intro-text { font-size: 16px; color: #4F544C; }
+.intro-index { font-size: 11px; }
+.section-description { font-size: 15px; color: #4F544C; }
+.service-number { font-size: 12px; }
+.service-card h3 { font-size: 22px; }
+.service-card > p { font-size: 15px; color: #4F544C; max-width: 340px; }
+.service-card ul { font-size: 14px; color: #3F443D; }
+.project-meta { font-size: 11px; }
+.project-info > p { font-size: 15px; max-width: 420px; color: rgba(240,231,219,.8); }
+.project-tag { font-size: 12px; }
+.work .section-description { color: rgba(240,231,219,.8); }
+.work-disclaimer { font-size: 12px; color: rgba(240,231,219,.65); }
+.process-step h3 { font-size: 20px; }
+.process-step p { font-size: 15px; color: #4F544C; }
+.contact-copy > p:not(.eyebrow) { font-size: 16px; color: rgba(240,231,219,.82); }
+.contact-details small { font-size: 11px; }
+.contact-details b { font-size: 14px; }
+.panel-kicker { font-size: 11px; }
+.contact-panel > p { font-size: 14px; color: #55594F; }
+/* Formulario de contacto (mailto:) — piso de 12px sobre los 9-11px de styles.css */
+.contact-form { gap: 15px; }
+.form-field { display: grid; gap: 6px; }
+.form-field label { font-size: 13px; font-weight: 700; }
+.form-field input, .form-field select, .form-field textarea { width: 100%; min-height: 46px; padding: 10px 11px; border: 1px solid #D6D0C4; border-radius: 0; background: rgba(255,255,255,.42); color: var(--green); font-size: 16px; }
+.form-field textarea { resize: vertical; min-height: 86px; }
+.form-field input::placeholder, .form-field textarea::placeholder { color: #6E7068; }
+.form-field select { cursor: pointer; }
+.form-note { margin: 0; font-size: 12px; line-height: 1.6; }
+
+/* Separador entre formulario y WhatsApp */
+.contact-divider { display: flex; align-items: center; gap: 12px; margin: 26px 0 16px; color: #6E7068; font-size: 12px; }
+.contact-divider::before, .contact-divider::after { flex: 1; content: ""; height: 1px; background: rgba(37, 45, 43, .16); }
+
+.back-top { font-size: 13px; }
+.footer-bottom { font-size: 11px; color: rgba(240,231,219,.7); }
+
+/* 2. Contraste */
+.eyebrow-dark { color: #4F5A52; }
+h2 span { color: #6B746B; }
+.step-no, .service-number { color: #666A60; }
+.hero-lead { color: rgba(240,231,219,.85); }
+.hero-footer { color: rgba(240,231,219,.7); }
+
+/* 3. Botón de WhatsApp (canal principal de contacto) */
+.button-wa { background: var(--green-wa); color: #fff; }
+.button-wa:hover { background: #178A45; color: #fff; }
+.contact-alt { margin: 14px 0 0; font-size: 13px; color: #55594F; text-align: center; }
+.contact-alt a { text-decoration: underline; }
+.contact-alt a:hover { color: var(--green); }
+/* .contact-alt es un <p> dentro de .contact-panel: gana la regla de arriba, fijala acá */
+.contact-panel > p.contact-alt { font-size: 13px; color: #55594F; }
+
+/* 4. Menú móvil: mantener navegación visible en una fila compacta */
+@media (max-width: 680px) {
+  .nav-wrap { flex-wrap: wrap; padding: 12px 0; }
+  .main-nav {
+    display: flex; order: 3; width: 100%; gap: 22px; margin: 0;
+    padding-top: 10px; border-top: 1px solid var(--line-light);
+    overflow-x: auto; white-space: nowrap;
+  }
+  .main-nav a { font-size: 13px; }
+  .hero-footer { font-size: 10px; }
+  .project-meta { font-size: 10px; }
+  .footer-bottom { font-size: 10px; }
+}
+
+/* 5. Botones y tarjetas con mejor foco/área táctil */
+.button, .nav-cta { min-height: 48px; }
+.service-card:hover { background: rgba(255,255,255,.28); transition: background .2s ease; }
+
+/* ===================================================================
+   ANIMACIONES — CSS puro, 2025
+   - Hero: entrada al cargar (opacity + slide-up 20px)
+   - Secciones: scroll-triggered nativo (animation-timeline: view())
+   - Botón WA: hover/tap sutil (scale + sombra)
+   - Accesibilidad: prefers-reduced-motion respetado en todo
+   - Progressive enhancement: Firefox/legacy ven sin JS, solo fade
+   =================================================================== */
+
+:root {
+  --dur-entrance: 720ms;
+  --dur-scroll: 520ms;
+  --dur-hover:   180ms;
+  --ease: cubic-bezier(.2,.7,.2,1);
+  --shift: 20px;              /* desplazamiento sutil */
+}
+
+/* --- Respeto a preferencias de movimiento (obligatorio) --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ===================================================================
+   HERO — entrada al cargar la página
+   Aplica a: h1 hero-copy, .hero-lead
+   =================================================================== */
+@keyframes hero-entrance {
+  0%   { opacity: 0; transform: translateY(var(--shift)); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.hero-copy > h1,
+.hero-copy .hero-lead {
+  animation: hero-entrance var(--dur-entrance) var(--ease) both;
+}
+
+/* Stagger sutil: el lead llega 120ms después del título */
+.hero-copy .hero-lead { animation-delay: 120ms; }
+
+/* ===================================================================
+   SECCIONES — scroll-triggered nativo (view timeline)
+   Aplica a: cada <section> del main (excepto hero, que ya entró)
+   =================================================================== */
+@keyframes section-fade {
+  0%   { opacity: 0; transform: translateY(var(--shift)); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Progressive enhancement: fade de fallback para navegadores sin view() */
+@supports not (animation-timeline: view()) {
+  main > section:not(.hero) {
+    opacity: 0;
+    animation: section-fade var(--dur-scroll) var(--ease) both;
+    animation-delay: 0.15s;
+  }
+}
+
+/* view() timeline — Chrome/Edge/Safari TP: animación cuando entra al viewport */
+@supports (animation-timeline: view()) {
+  main > section:not(.hero) {
+    animation: section-fade var(--dur-scroll) var(--ease) both;
+    animation-timeline: view();
+    animation-range-start: entry 5%;
+    animation-range-end: exit 20%;
+  }
+}
+
+/* ===================================================================
+   BOTÓN WHATSAPP — hover/tap sutil
+   Escala suave + sombra de elevación
+   =================================================================== */
+@keyframes wa-pulse {
+  0%, 100% { box-shadow: 0 2px 8px rgba(26,168,85,.30); }
+  50%      { box-shadow: 0 4px 14px rgba(26,168,85,.42); }
+}
+
+.button-wa {
+  transition: transform var(--dur-hover) var(--ease),
+              box-shadow var(--dur-hover) var(--ease);
+  will-change: transform;
+}
+
+.button-wa:hover,
+.button-wa:focus-visible {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(26,168,85,.45);
+}
+
+/* Disparo táctil: pulse sutil al presionar */
+.button-wa:active {
+  animation: wa-pulse 260ms ease;
+}
+
+/* ===================================================================
+   HERO ART (laptop mock) — entrada sutil alinear con el copy
+   =================================================================== */
+@keyframes hero-art-entrance {
+  0%   { opacity: 0; transform: translateY(24px) scale(.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.hero-art {
+  animation: hero-art-entrance 820ms cubic-bezier(.2,.7,.2,1) 240ms both;
+}
+
+/* ===================================================================
+   BOTONES LIGHT (hero) — hover sutil, mismo principio
+   =================================================================== */
+.button-light,
+.text-link-light {
+  transition: transform var(--dur-hover) var(--ease),
+              opacity var(--dur-hover) var(--ease);
+}
+
+.button-light:hover,
+.button-light:focus-visible,
+.text-link-light:hover,
+.text-link-light:focus-visible {
+  transform: translateY(-1px);
 }

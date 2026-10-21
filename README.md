@@ -4,8 +4,7 @@ Landing page responsive hecha con HTML semántico y CSS puro. Sin frameworks ni 
 
 ## Archivos
 - `index.html`: estructura y contenido.
-- `styles.css`: estilos base, paleta y responsive.
-- `mejoras.css`: overrides de tipografía, contraste, menú móvil y botón de WhatsApp. Se carga **después** de `styles.css`.
+- `styles.css`: estilos base, paleta, tipografía, contraste, menú móvil, botón de WhatsApp y responsive. Todo en un solo archivo.
 - `og.png`: imagen de preview 1200×630 para compartir en redes.
 
 ## Cómo verla
@@ -27,5 +26,5 @@ Los colores principales están declarados como variables CSS al comienzo de `sty
 - `--green: #252D2B`
 - `--champagne: #DCC8A6`
 - `--ivory: #F0E7DB`
-
-`mejoras.css` redefine `--muted` y agrega `--green-wa` (verde de WhatsApp).
+- `--muted: #5A5F57` (gris con contraste AA)
+- `--green-wa: #1FA855` (verde de WhatsApp)
