@@ -1,339 +1,288 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#252D2B">
-  <meta name="description" content="ANWAY Creative Studio combina desarrollo web, marketing digital y creatividad para ayudar a negocios y emprendimientos a construir una presencia profesional y crecer.">
-  <title>ANWAY Creative Studio — Web, marketing y soluciones digitales</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23252D2B'/><text x='50' y='68' font-size='60' text-anchor='middle' fill='%23DCC8A6' font-family='Georgia'>a.</text></svg>">
-  <link rel="canonical" href="https://www.anwaycreativestudio.tech/">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.anwaycreativestudio.tech/">
-  <meta property="og:title" content="ANWAY Creative Studio — Web, marketing y soluciones digitales">
-  <meta property="og:description" content="Desarrollo web, marketing digital y soluciones digitales a medida.">
-  <meta property="og:image" content="https://www.anwaycreativestudio.tech/og.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#252D2B" name="theme-color"/>
+<meta content="ANWAY Creative Studio combina desarrollo web, marketing digital y creatividad para ayudar a negocios y emprendimientos a construir una presencia profesional y crecer." name="description"/>
+<title>ANWAY Creative Studio — Web, marketing y soluciones digitales</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+<link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;rect width='100' height='100' fill='%23252D2B'/&gt;&lt;text x='50' y='68' font-size='60' text-anchor='middle' fill='%23DCC8A6' font-family='Georgia'&gt;a.&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+<link href="https://www.anwaycreativestudio.tech/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="https://www.anwaycreativestudio.tech/" property="og:url"/>
+<meta content="ANWAY Creative Studio — Web, marketing y soluciones digitales" property="og:title"/>
+<meta content="Desarrollo web, marketing digital y soluciones digitales a medida." property="og:description"/>
+<meta content="https://www.anwaycreativestudio.tech/og.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 </head>
 <body>
-  <a class="skip-link" href="#contenido">Saltar al contenido</a>
-
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="#inicio" aria-label="ANWAY Creative Studio, inicio">
-        <span class="brand-name">ANWAY<span class="brand-dot">.</span></span>
-        <span class="brand-caption">CREATIVE STUDIO</span>
-      </a>
-
-      <nav class="main-nav" aria-label="Navegación principal">
-        <a href="#servicios">Servicios</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#proceso">Cómo trabajamos</a>
-        <a href="#nosotros">Quiénes somos</a>
-      </nav>
-
-      <a class="nav-cta" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
-    </div>
-  </header>
-
-  <main id="contenido">
-    <section class="hero section-dark" id="inicio">
-      <div class="hero-orb orb-one" aria-hidden="true"></div>
-      <div class="hero-orb orb-two" aria-hidden="true"></div>
-      <div class="hero-stage">
-        <div class="laptop-intro" aria-hidden="true">
-          <canvas id="laptop-canvas"></canvas>
-          <div class="project-caption">
-            <p class="caption-kicker">Una idea toma forma</p>
-            <p class="caption-cta">Deslizá</p>
-            <span class="caption-thread"></span>
-          </div>
-          <div class="stage-progress"><span class="stage-progress-fill"></span></div>
-        </div>
-        <div class="hero-main">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-line"></span> ESTUDIO CREATIVO DIGITAL</p>
-          <h1>Ideas claras.<br><em>Soluciones</em> digitales.</h1>
-          <p class="hero-lead">Combinamos desarrollo web, marketing digital y creatividad para ayudar a negocios y emprendimientos de Olavarría y todo el país a construir una presencia profesional y crecer.</p>
-          <div class="hero-actions">
-            <a class="button button-light" href="#contacto">Hablemos de tu proyecto <span aria-hidden="true">↗</span></a>
-            <a class="text-link text-link-light" href="#servicios">Conocé qué hacemos <span aria-hidden="true">↓</span></a>
-          </div>
-          <div class="hero-trust" aria-label="Cómo trabajamos">
-            <div class="trust-item"><span class="trust-check" aria-hidden="true">✓</span><span><strong>Web + gestión</strong><small>En una misma solución</small></span></div>
-            <div class="trust-item"><span class="trust-check" aria-hidden="true">✓</span><span><strong>Atención directa</strong><small>Hablás con quien desarrolla</small></span></div>
-            <div class="trust-item"><span class="trust-check" aria-hidden="true">✓</span><span><strong>Adaptado a tu negocio</strong><small>Sin soluciones genéricas</small></span></div>
-          </div>
-        </div>
-      </div>
-      <div class="container hero-footer">
-        <span>ESTRATEGIA</span><i></i><span>DISEÑO</span><i></i><span>DESARROLLO</span>
-        <span class="hero-footer-right">OLAVARRÍA · ARGENTINA / REMOTO</span>
-      </div>
-        </div>
-      </div>
-    </section>
-    <script>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header">
+<div class="container nav-wrap">
+<a aria-label="ANWAY Creative Studio, inicio" class="brand" href="#inicio">
+<span class="brand-name">ANWAY<span class="brand-dot">.</span></span>
+<span class="brand-caption">CREATIVE STUDIO</span>
+</a>
+<nav aria-label="Navegación principal" class="main-nav">
+<a href="#servicios">Servicios</a>
+<a href="#proyectos">Proyectos</a>
+<a href="#proceso">Cómo trabajamos</a>
+<a href="#nosotros">Quiénes somos</a>
+<a href="#herramientas">Herramientas</a></nav>
+<a class="nav-cta" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
+</div>
+</header>
+<main id="contenido">
+<section class="hero section-dark" id="inicio">
+<div aria-hidden="true" class="hero-orb orb-one"></div>
+<div aria-hidden="true" class="hero-orb orb-two"></div>
+<div class="hero-stage">
+<div aria-hidden="true" class="laptop-intro">
+<canvas id="laptop-canvas"></canvas>
+<div class="project-caption">
+<p class="caption-kicker">Una idea toma forma</p>
+<p class="caption-cta">Deslizá</p>
+<span class="caption-thread"></span>
+</div>
+<div class="stage-progress"><span class="stage-progress-fill"></span></div>
+</div>
+<div class="hero-main">
+<div class="container hero-grid">
+<div class="hero-copy">
+<p class="eyebrow"><span class="eyebrow-line"></span> ESTUDIO CREATIVO DIGITAL</p>
+<h1>Ideas claras.<br/><em>Soluciones</em> digitales.</h1>
+<p class="hero-lead">Combinamos desarrollo web, marketing digital y creatividad para ayudar a negocios y emprendimientos de Olavarría y todo el país a construir una presencia profesional y crecer.</p>
+<div class="hero-actions">
+<a class="button button-light" href="#contacto">Hablemos de tu proyecto <span aria-hidden="true">↗</span></a>
+<a class="text-link text-link-light" href="#servicios">Conocé qué hacemos <span aria-hidden="true">↓</span></a>
+</div>
+<div aria-label="Cómo trabajamos" class="hero-trust">
+<div class="trust-item"><span aria-hidden="true" class="trust-check">✓</span><span><strong>Web + gestión</strong><small>En una misma solución</small></span></div>
+<div class="trust-item"><span aria-hidden="true" class="trust-check">✓</span><span><strong>Atención directa</strong><small>Hablás con quien desarrolla</small></span></div>
+<div class="trust-item"><span aria-hidden="true" class="trust-check">✓</span><span><strong>Adaptado a tu negocio</strong><small>Sin soluciones genéricas</small></span></div>
+</div>
+</div>
+</div>
+<div class="container hero-footer">
+<span>ESTRATEGIA</span><i></i><span>DISEÑO</span><i></i><span>DESARROLLO</span>
+<span class="hero-footer-right">OLAVARRÍA · ARGENTINA / REMOTO</span>
+</div>
+</div>
+</div>
+</section>
+<script>
       if (matchMedia("(prefers-reduced-motion: no-preference)").matches) document.querySelector(".hero").classList.add("has-laptop");
     </script>
-
-    <section class="intro section-ivory">
-      <div class="container intro-grid">
-        <p class="eyebrow eyebrow-dark"><span class="eyebrow-line"></span> LO QUE NOS MUEVE</p>
-        <div>
-          <h2>Menos complicaciones.<br><span>Más posibilidades.</span></h2>
-          <p class="intro-text">La tecnología debería hacerte la vida más fácil. Por eso combinamos pensamiento estratégico, diseño cuidado y desarrollo sólido para crear herramientas útiles, claras y preparadas para evolucionar.</p>
-        </div>
-        <div class="intro-index"><span>01</span><span class="index-line"></span><span>UNA IDEA, BIEN HECHA</span></div>
-      </div>
-    </section>
-
-    <section class="services section-ivory" id="servicios">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow eyebrow-dark"><span class="eyebrow-line"></span> QUÉ HACEMOS</p>
-            <h2>Soluciones que<br><span>trabajan juntas.</span></h2>
-          </div>
-          <p class="section-description">Desde una web que represente tu negocio hasta una comunicación en redes que conecte con las personas. Podés contratar cada servicio por separado o combinarlos.</p>
-        </div>
-
-        <div class="service-group">
-          <h3 class="service-group-title">Desarrollo web y tecnología</h3>
-          <div class="service-grid">
-            <article class="service-card">
-              <div class="service-top"><span class="service-number">01</span><span class="service-icon icon-window" aria-hidden="true"><i></i></span></div>
-              <h4>Desarrollo web</h4>
-              <p>Sitios rápidos, claros y adaptables que presentan tu negocio con profesionalismo y convierten visitas en oportunidades.</p>
-              <ul><li>Webs institucionales</li><li>Landing pages</li><li>Catálogos digitales</li></ul>
-              <a class="card-link" href="#contacto">Pedir presupuesto de web <span aria-hidden="true">↗</span></a>
-            </article>
-
-            <article class="service-card">
-              <div class="service-top"><span class="service-number">02</span><span class="service-icon icon-grid" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
-              <h4>Sistemas a medida</h4>
-              <p>Aplicaciones que ordenan procesos, centralizan información y te ayudan a tomar mejores decisiones.</p>
-              <ul><li>Stock y ventas</li><li>Paneles de administración</li><li>Gestión de clientes y pedidos</li></ul>
-              <a class="card-link" href="#contacto">Pedir presupuesto de sistema <span aria-hidden="true">↗</span></a>
-            </article>
-
-            <article class="service-card">
-              <div class="service-top"><span class="service-number">03</span><span class="service-icon icon-flow" aria-hidden="true"><i></i><i></i><i></i></span></div>
-              <h4>Soluciones digitales</h4>
-              <p>Mejoras y herramientas que conectan tus tareas cotidianas para que puedas dedicar tiempo a lo importante.</p>
-              <ul><li>Automatización de tareas</li><li>Integraciones</li><li>Mejora de procesos</li></ul>
-              <a class="card-link" href="#contacto">Pedir presupuesto de automatización <span aria-hidden="true">↗</span></a>
-            </article>
-          </div>
-        </div>
-
-        <div class="service-group">
-          <h3 class="service-group-title">Marketing y redes sociales</h3>
-          <div class="service-grid">
-            <article class="service-card">
-              <div class="service-top"><span class="service-number">04</span><span class="service-icon icon-community" aria-hidden="true"><i></i><i></i><i></i></span></div>
-              <h4>Community Management</h4>
-              <p>Gestión de redes, planificación de publicaciones y comunicación con tu comunidad.</p>
-              <ul><li>Planificación de publicaciones</li><li>Comunicación con la comunidad</li><li>Seguimiento de la cuenta</li></ul>
-              <a class="card-link" href="#contacto">Consultar por redes <span aria-hidden="true">↗</span></a>
-            </article>
-
-            <article class="service-card">
-              <div class="service-top"><span class="service-number">05</span><span class="service-icon icon-chart" aria-hidden="true"><i></i><i></i><i></i></span></div>
-              <h4>Social Media Management</h4>
-              <p>Estrategia, objetivos, calendario de contenido y análisis de resultados.</p>
-              <ul><li>Estrategia de redes</li><li>Objetivos y calendario</li><li>Análisis de métricas</li></ul>
-              <a class="card-link" href="#contacto">Consultar por redes <span aria-hidden="true">↗</span></a>
-            </article>
-
-            <article class="service-card">
-              <div class="service-top"><span class="service-number">06</span><span class="service-icon icon-frame" aria-hidden="true"></span></div>
-              <h4>Diseño de contenido</h4>
-              <p>Publicaciones, historias, carruseles y piezas visuales para comunicar con identidad.</p>
-              <ul><li>Publicaciones e historias</li><li>Carruseles</li><li>Piezas de comunicación</li></ul>
-              <a class="card-link" href="#contacto">Consultar por contenido <span aria-hidden="true">↗</span></a>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="work section-dark" id="proyectos">
-      <div class="container">
-        <div class="section-heading work-heading">
-          <div>
-            <p class="eyebrow"><span class="eyebrow-line"></span> TRABAJO CON PROPÓSITO</p>
-            <h2>Ideas que toman<br><em>forma.</em></h2>
-          </div>
-          <p class="section-description">Cada proyecto empieza escuchando. Estos son ejemplos de los desafíos que podemos resolver juntos.</p>
-        </div>
-
-        <div class="project-list">
-          <article class="project project-property">
-            <div class="project-visual property-visual">
-              <div class="browser-bar"><span></span><span></span><span></span><b>propiedades / catálogo</b></div>
-              <div class="property-layout">
-                <div class="property-sidebar"><span></span><span></span><span></span><span></span></div>
-                <div class="property-content">
-                  <div class="property-heading"></div>
-                  <div class="property-filters"><i></i><i></i><i></i></div>
-                  <div class="property-homes"><div class="home-card"><span></span><i></i><b></b></div><div class="home-card"><span></span><i></i><b></b></div><div class="home-card"><span></span><i></i><b></b></div></div>
-                </div>
-              </div>
-            </div>
-            <div class="project-info">
-              <div class="project-meta"><span>01 / PLATAFORMAS WEB</span><span>CATÁLOGO · GESTIÓN</span></div>
-              <h3>Una mejor forma de<br>encontrar propiedades.</h3>
-              <p>Una experiencia de búsqueda clara, con filtros avanzados y un panel de gestión para administrar publicaciones desde un solo lugar.</p>
-              <span class="project-tag">Concepto de proyecto</span>
-            </div>
-          </article>
-
-          <article class="project project-system">
-            <div class="project-visual system-visual">
-              <div class="system-window">
-                <div class="system-sidebar"><span class="system-logo">a.</span><i></i><i></i><i></i><i></i></div>
-                <div class="system-main">
-                  <div class="system-head"><span></span><i></i></div>
-                  <div class="metric-row"><div><small>VENTAS</small><b></b><i></i></div><div><small>PRODUCTOS</small><b></b><i></i></div><div><small>GANANCIA</small><b></b><i></i></div></div>
-                  <div class="chart-card"><div class="chart-label"></div><div class="chart-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-                </div>
-              </div>
-            </div>
-            <div class="project-info">
-              <div class="project-meta"><span>02 / SISTEMAS DE GESTIÓN</span><span>STOCK · VENTAS</span></div>
-              <h3>El negocio, más<br>ordenado.</h3>
-              <p>Un sistema pensado para centralizar productos, registrar ventas y visualizar información clave sin depender de planillas dispersas.</p>
-              <span class="project-tag">Concepto de producto</span>
-            </div>
-          </article>
-        </div>
-        <p class="work-disclaimer">Las imágenes son representaciones conceptuales de interfaces; se reemplazan por capturas reales de proyectos publicados cuando estén disponibles.</p>
-      </div>
-    </section>
-
-    <section class="process section-ivory" id="proceso">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow eyebrow-dark"><span class="eyebrow-line"></span> CÓMO TRABAJAMOS</p>
-            <h2>Un proceso simple.<br><span>Resultados con sentido.</span></h2>
-          </div>
-          <p class="section-description">Sin vueltas ni tecnicismos innecesarios. Trabajamos en etapas claras, con comunicación directa y objetivos compartidos.</p>
-        </div>
-        <div class="process-list">
-          <article class="process-step"><span class="step-no">01</span><div><h3>Nos conocemos</h3><p>Conversamos sobre tu negocio, tus necesidades y tus objetivos.</p></div><span class="step-symbol" aria-hidden="true">↘</span></article>
-          <article class="process-step"><span class="step-no">02</span><div><h3>Analizamos y planificamos</h3><p>Definimos el alcance, la propuesta, los plazos y el presupuesto.</p></div><span class="step-symbol" aria-hidden="true">↘</span></article>
-          <article class="process-step"><span class="step-no">03</span><div><h3>Creamos y desarrollamos</h3><p>Diseñamos el sitio web, los contenidos o las soluciones acordadas.</p></div><span class="step-symbol" aria-hidden="true">↘</span></article>
-          <article class="process-step"><span class="step-no">04</span><div><h3>Revisamos y optimizamos</h3><p>Ajustamos las entregas y, en servicios continuos, analizamos resultados.</p></div><span class="step-symbol" aria-hidden="true">↗</span></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="about section-ivory" id="nosotros">
-      <div class="container about-grid">
-        <div class="about-head">
-          <p class="eyebrow eyebrow-dark"><span class="eyebrow-line"></span> QUIÉNES SOMOS</p>
-          <h2>Dos especialidades.<br><span>Una misma visión.</span></h2>
-        </div>
-        <div class="about-body">
-          <p class="about-lead">En ANWAY Creative Studio combinamos tecnología, estrategia y creatividad para desarrollar soluciones digitales adaptadas a cada negocio.</p>
-          <div class="about-areas">
-            <div class="about-area">
-              <span>01</span>
-              <h3>Tecnología</h3>
-              <p>Desarrollo web, sistemas a medida y soluciones tecnológicas.</p>
-            </div>
-            <div class="about-area">
-              <span>02</span>
-              <h3>Comunicación</h3>
-              <p>Marketing digital, gestión de comunidades y creación de contenido visual.</p>
-            </div>
-          </div>
-          <p class="about-note">Creemos que una presencia digital sólida necesita una buena experiencia web y una comunicación clara y coherente.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact section-dark" id="contacto">
-      <div class="contact-glow" aria-hidden="true"></div>
-      <div class="container contact-grid">
-        <div class="contact-copy">
-          <p class="eyebrow"><span class="eyebrow-line"></span> EL PRÓXIMO PASO EMPIEZA ACÁ</p>
-          <h2>¿Y si hacemos<br><em>algo bueno</em><br>juntos?</h2>
-          <p>Contame qué tenés en mente. No hace falta que tengas todo resuelto: podemos empezar por una conversación.</p>
-          <div class="contact-details">
-            <span class="contact-detail-icon" aria-hidden="true">↗</span>
-            <span><small>PRIMERA CHARLA</small><b>Directa, sin compromiso.</b></span>
-          </div>
-        </div>
-        <div class="contact-panel">
-          <span class="panel-kicker">CONTANOS TU IDEA</span>
-          <h3>Empecemos por lo importante.</h3>
-          <p>Completá el formulario y se abrirá tu aplicación de correo con el mensaje listo para enviar.</p>
-          <form class="contact-form">
-            <div class="form-field">
-              <label for="nombre">Tu nombre</label>
-              <input id="nombre" name="Nombre" type="text" autocomplete="name" placeholder="¿Cómo te llamás?" required>
-            </div>
-            <div class="form-field">
-              <label for="email">Tu email</label>
-              <input id="email" name="Email" type="email" autocomplete="email" placeholder="nombre@empresa.com" required>
-            </div>
-            <div class="form-field">
-              <label for="servicio">¿Qué necesitás?</label>
-              <select id="servicio" name="Servicio">
-                <option value="No estoy seguro">Todavía lo estoy definiendo</option>
-                <option value="Desarrollo web">Un sitio web</option>
-                <option value="Sistema a medida">Un sistema de gestión</option>
-                <option value="Solución digital">Una solución digital</option>
-                <option value="Otro proyecto">Algo diferente</option>
-              </select>
-            </div>
-            <div class="form-field">
-              <label for="mensaje">Contame un poco más</label>
-              <textarea id="mensaje" name="Mensaje" rows="3" placeholder="¿Qué te gustaría resolver o mejorar?"></textarea>
-            </div>
-            <button class="button button-light submit-button" type="submit">Preparar mensaje <span aria-hidden="true">↗</span></button>
-            <p class="form-note">El mensaje se arma en tu cliente de correo; ningún dato se guarda en el sitio.</p>
-          </form>
-
-          <div class="contact-divider" aria-hidden="true"><span>o escribinos directo</span></div>
-
-          <a class="button button-wa submit-button" href="https://wa.me/5492284616657?text=Hola%20ANWAY%2C%20quiero%20consultar%20por%20un%20proyecto" target="_blank" rel="noopener">Escribinos por WhatsApp <span aria-hidden="true">↗</span></a>
-          <p class="contact-alt">o por mail a <a href="mailto:anwaycreativestudio@gmail.com">anwaycreativestudio@gmail.com</a></p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer section-dark">
-    <div class="container footer-main">
-      <a class="brand footer-brand" href="#inicio" aria-label="ANWAY Creative Studio, volver al inicio">
-        <span class="brand-name">ANWAY<span class="brand-dot">.</span></span>
-        <span class="brand-caption">CREATIVE STUDIO</span>
-      </a>
-      <p>Tecnología y comunicación,<br>una misma visión.</p>
-      <a class="back-top" href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a>
-    </div>
-    <div class="container footer-bottom">
-      <span>© 2026 ANWAY Creative Studio. Todos los derechos reservados.</span>
-      <span>HECHO CON INTENCIÓN <b>✳</b></span>
-    </div>
-  </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script type="module">
+<section class="intro section-ivory">
+<div class="container intro-grid">
+<p class="eyebrow eyebrow-dark"><span class="eyebrow-line"></span> LO QUE NOS MUEVE</p>
+<div>
+<h2>Menos complicaciones.<br/><span>Más posibilidades.</span></h2>
+<p class="intro-text">La tecnología debería hacerte la vida más fácil. Por eso combinamos pensamiento estratégico, diseño cuidado y desarrollo sólido para crear herramientas útiles, claras y preparadas para evolucionar.</p>
+</div>
+<div class="intro-index"><span>01</span><span class="index-line"></span><span>UNA IDEA, BIEN HECHA</span></div>
+</div>
+</section>
+<section class="services section-ivory" id="servicios">
+<div class="container">
+<div class="section-heading">
+<div>
+<p class="eyebrow eyebrow-dark"><span class="eyebrow-line"></span> QUÉ HACEMOS</p>
+<h2>Soluciones que<br/><span>trabajan juntas.</span></h2>
+</div>
+<p class="section-description">Desde una web que represente tu negocio hasta una comunicación en redes que conecte con las personas. Podés contratar cada servicio por separado o combinarlos.</p>
+</div>
+<div class="service-group">
+<h3 class="service-group-title">Desarrollo web y tecnología</h3>
+<div class="service-grid">
+<article class="service-card">
+<div class="service-top"><span class="service-number">01</span><span aria-hidden="true" class="service-icon icon-window"><i></i></span></div>
+<h4>Desarrollo web</h4>
+<p>Sitios rápidos, claros y adaptables que presentan tu negocio con profesionalismo y convierten visitas en oportunidades.</p>
+<ul><li>Webs institucionales</li><li>Landing pages</li><li>Catálogos digitales</li></ul>
+<a class="card-link" href="#contacto">Pedir presupuesto de web <span aria-hidden="true">↗</span></a>
+</article>
+<article class="service-card">
+<div class="service-top"><span class="service-number">02</span><span aria-hidden="true" class="service-icon icon-grid"><i></i><i></i><i></i><i></i></span></div>
+<h4>Sistemas a medida</h4>
+<p>Aplicaciones que ordenan procesos, centralizan información y te ayudan a tomar mejores decisiones.</p>
+<ul><li>Stock y ventas</li><li>Paneles de administración</li><li>Gestión de clientes y pedidos</li></ul>
+<a class="card-link" href="#contacto">Pedir presupuesto de sistema <span aria-hidden="true">↗</span></a>
+</article>
+<article class="service-card">
+<div class="service-top"><span class="service-number">03</span><span aria-hidden="true" class="service-icon icon-flow"><i></i><i></i><i></i></span></div>
+<h4>Soluciones digitales</h4>
+<p>Mejoras y herramientas que conectan tus tareas cotidianas para que puedas dedicar tiempo a lo importante.</p>
+<ul><li>Automatización de tareas</li><li>Integraciones</li><li>Mejora de procesos</li></ul>
+<a class="card-link" href="#contacto">Pedir presupuesto de automatización <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+</div>
+<div class="service-group">
+<h3 class="service-group-title">Marketing y redes sociales</h3>
+<div class="service-grid">
+<article class="service-card">
+<div class="service-top"><span class="service-number">04</span><span aria-hidden="true" class="service-icon icon-community"><i></i><i></i><i></i></span></div>
+<h4>Community Management</h4>
+<p>Gestión de redes, planificación de publicaciones y comunicación con tu comunidad.</p>
+<ul><li>Planificación de publicaciones</li><li>Comunicación con la comunidad</li><li>Seguimiento de la cuenta</li></ul>
+<a class="card-link" href="#contacto">Consultar por redes <span aria-hidden="true">↗</span></a>
+</article>
+<article class="service-card">
+<div class="service-top"><span class="service-number">05</span><span aria-hidden="true" class="service-icon icon-chart"><i></i><i></i><i></i></span></div>
+<h4>Social Media Management</h4>
+<p>Estrategia, objetivos, calendario de contenido y análisis de resultados.</p>
+<ul><li>Estrategia de redes</li><li>Objetivos y calendario</li><li>Análisis de métricas</li></ul>
+<a class="card-link" href="#contacto">Consultar por redes <span aria-hidden="true">↗</span></a>
+</article>
+<article class="service-card">
+<div class="service-top"><span class="service-number">06</span><span aria-hidden="true" class="service-icon icon-frame"></span></div>
+<h4>Diseño de contenido</h4>
+<p>Publicaciones, historias, carruseles y piezas visuales para comunicar con identidad.</p>
+<ul><li>Publicaciones e historias</li><li>Carruseles</li><li>Piezas de comunicación</li></ul>
+<a class="card-link" href="#contacto">Consultar por contenido <span aria-hidden="true">↗</span></a>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="work section-dark" id="proyectos">
+<div class="container">
+<div class="section-heading work-heading">
+<div>
+<p class="eyebrow"><span class="eyebrow-line"></span>NUESTRO TRABAJO</p>
+<h2>Proyectos con<br/><em>identidad.</em></h2>
+</div>
+<p class="section-description">Una selección de desarrollos y ejercicios creativos. Cada caso está identificado según su alcance real.</p>
+</div>
+<div class="mock-project-grid">
+<article class="mock-project">
+<div class="mock-project-visual visual-vial"><span class="visual-index">01</span><span class="visual-word">Vial<br/>San Javier</span><span class="visual-caption">DESARROLLO WEB</span></div>
+<div class="mock-project-info"><div class="mock-project-meta"><span>DESARROLLO WEB</span><span class="status-pending">VALIDAR PERMISO</span></div><h3>Vial San Javier</h3><p>Proyecto web desarrollado por el área tecnológica.</p></div>
+</article>
+<article class="mock-project">
+<div class="mock-project-visual visual-nancy"><span class="visual-index">02</span><span class="visual-word">Nancy<br/>Gortari</span><span class="visual-caption">PROPIEDADES</span></div>
+<div class="mock-project-info"><div class="mock-project-meta"><span>DESARROLLO WEB</span><span class="status-pending">VALIDAR PERMISO</span></div><h3>Nancy Gortari Propiedades</h3><p>Proyecto web para el sector inmobiliario.</p></div>
+</article>
+<article class="mock-project">
+<div class="mock-project-visual visual-bas"><span class="visual-index">03</span><span class="visual-word">BAS</span><span class="visual-caption">PET SHOP</span></div>
+<div class="mock-project-info"><div class="mock-project-meta"><span>PROYECTO PROPIO</span><span class="status-own">DEL EQUIPO</span></div><h3>BAS Pet Shop</h3><p>Proyecto digital propio del equipo.</p></div>
+</article>
+<article class="mock-project">
+<div class="mock-project-visual visual-ameri"><span class="visual-index">04</span><span class="visual-word">AMERÍ</span><span class="visual-caption">INDUMENTARIA FEMENINA</span></div>
+<div class="mock-project-info"><div class="mock-project-meta"><span>EMPRENDIMIENTO REAL</span><span>EXPERIENCIA</span></div><h3>AMERÍ</h3><p>Experiencia en gestión de una marca de indumentaria femenina.</p></div>
+</article>
+<article class="mock-project">
+<div class="mock-project-visual visual-bella"><span class="visual-index">05</span><span class="visual-word">Bella<br/>Estética</span><span class="visual-caption">COMUNICACIÓN &amp; CONTENIDO</span></div>
+<div class="mock-project-info"><div class="mock-project-meta"><span>EJERCICIO CONCEPTUAL</span><span>PRÁCTICA</span></div><h3>Bella Estética</h3><p>Práctica de comunicación y contenido para redes sociales.</p></div>
+</article>
+</div>
+<p class="work-disclaimer">Las imágenes de muestra son representaciones visuales. En la versión definitiva se reemplazan por capturas y diseños originales autorizados.</p>
+</div>
+</section>
+<section class="process section-ivory" id="proceso">
+<div class="container">
+<div class="section-heading">
+<div>
+<p class="eyebrow eyebrow-dark"><span class="eyebrow-line"></span> CÓMO TRABAJAMOS</p>
+<h2>Un proceso simple.<br/><span>Resultados con sentido.</span></h2>
+</div>
+<p class="section-description">Sin vueltas ni tecnicismos innecesarios. Trabajamos en etapas claras, con comunicación directa y objetivos compartidos.</p>
+</div>
+<div class="process-list">
+<article class="process-step"><span class="step-no">01</span><div><h3>Nos conocemos</h3><p>Conversamos sobre tu negocio, tus necesidades y tus objetivos.</p></div><span aria-hidden="true" class="step-symbol">↘</span></article>
+<article class="process-step"><span class="step-no">02</span><div><h3>Analizamos y planificamos</h3><p>Definimos el alcance, la propuesta, los plazos y el presupuesto.</p></div><span aria-hidden="true" class="step-symbol">↘</span></article>
+<article class="process-step"><span class="step-no">03</span><div><h3>Creamos y desarrollamos</h3><p>Diseñamos el sitio web, los contenidos o las soluciones acordadas.</p></div><span aria-hidden="true" class="step-symbol">↘</span></article>
+<article class="process-step"><span class="step-no">04</span><div><h3>Revisamos y optimizamos</h3><p>Ajustamos las entregas y, en servicios continuos, analizamos resultados.</p></div><span aria-hidden="true" class="step-symbol">↗</span></article>
+</div>
+</div>
+</section>
+<section class="about section-ivory" id="nosotros">
+<div class="container about-grid">
+<div class="about-head">
+<p class="eyebrow eyebrow-dark"><span class="eyebrow-line"></span> QUIÉNES SOMOS</p>
+<h2>Dos especialidades.<br/><span>Una misma visión.</span></h2>
+</div>
+<div class="about-body">
+<p class="about-lead">En ANWAY Creative Studio combinamos tecnología, estrategia y creatividad para desarrollar soluciones digitales adaptadas a cada negocio.</p>
+<div class="about-areas">
+<div class="about-area">
+<span>01</span>
+<h3>Tecnología</h3>
+<p>Desarrollo web, sistemas a medida y soluciones tecnológicas.</p>
+</div>
+<div class="about-area">
+<span>02</span>
+<h3>Comunicación</h3>
+<p>Marketing digital, gestión de comunidades y creación de contenido visual.</p>
+</div>
+</div>
+<p class="about-note">Creemos que una presencia digital sólida necesita una buena experiencia web y una comunicación clara y coherente.</p>
+</div>
+</div>
+</section><section class="tools-section section-ivory" id="herramientas">
+<div class="container">
+<div class="tools-heading">
+<p class="eyebrow"><span class="eyebrow-line"></span>ORGANIZACIÓN Y CREATIVIDAD</p>
+<h2>Herramientas al servicio<br/><em>de las ideas.</em></h2>
+<p>Planificamos, organizamos y desarrollamos cada proyecto con procesos claros.</p>
+</div>
+<div aria-label="Herramientas de trabajo" class="tools-list">
+<div class="tool-item"><span class="tool-mark">T</span><span>Trello</span></div>
+<div class="tool-item"><span class="tool-mark">N</span><span>Notion</span></div>
+<div class="tool-item"><span class="tool-mark">C</span><span>Canva</span><small>INCORPORACIÓN PREVISTA</small></div>
+<div class="tool-item"><span class="tool-mark">&lt;/&gt;</span><span>Herramientas de desarrollo web</span><small>A CONFIRMAR</small></div>
+</div>
+</div>
+</section>
+<section class="contact section-dark" id="contacto">
+<div aria-hidden="true" class="contact-glow"></div>
+<div class="container contact-grid">
+<div class="contact-copy">
+<p class="eyebrow"><span class="eyebrow-line"></span>EMPECEMOS A CREAR</p>
+<h2>¿Y si hacemos algo bueno juntos?</h2>
+<p>Contanos qué tenés en mente. Ya sea una web, tus redes sociales o una solución integral, queremos conocer tu proyecto.</p>
+<span class="pill">Trabajamos con negocios y emprendimientos</span>
+</div>
+<div class="contact-panel briefing-panel">
+<span class="panel-kicker">CONTANOS SOBRE TU NEGOCIO</span>
+<h3>Contanos sobre tu negocio.</h3>
+<p>Completá nuestro briefing para que podamos entender tus objetivos y preparar una propuesta personalizada.</p>
+<a class="button button-light briefing-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdzKga26gTG7RnB1KdiBRv0ugkC_xPIr8bdsu8ROv3Hw_Lbeg/viewform" rel="noopener" target="_blank">Completar briefing <span aria-hidden="true">↗</span></a>
+<div class="briefing-contact">
+<span>¿Preferís hablar directamente?</span>
+<a class="button button-wa" href="https://wa.me/5492284616657?text=Hola%20ANWAY%2C%20quiero%20consultar%20por%20un%20proyecto" rel="noopener" target="_blank">Escribinos por WhatsApp <span aria-hidden="true">↗</span></a>
+<p class="contact-alt">o por mail a <a href="mailto:anwaycreativestudio@gmail.com">anwaycreativestudio@gmail.com</a></p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer section-dark">
+<div class="container footer-main">
+<a aria-label="ANWAY Creative Studio, volver al inicio" class="brand footer-brand" href="#inicio">
+<span class="brand-name">ANWAY<span class="brand-dot">.</span></span>
+<span class="brand-caption">CREATIVE STUDIO</span>
+</a>
+<p>Tecnología y comunicación,<br/>una misma visión.</p>
+<a class="back-top" href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a>
+</div>
+<div class="container footer-bottom">
+<span>© 2026 ANWAY Creative Studio. Todos los derechos reservados.</span>
+<span>HECHO CON INTENCIÓN <b>✳</b></span>
+</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script type="module">
     // Notebook 3D procedural (verde ANWAY + champagne). Scroll: cerrada -> se abre -> cámara entra a la pantalla -> home real.
     const hero = document.querySelector(".hero");
     if (hero.classList.contains("has-laptop")) boot().catch(function (e) { console.warn("Notebook 3D desactivada:", e); hero.classList.remove("has-laptop"); });
@@ -502,26 +451,5 @@
     }
   </script>
 
-  <script>
-    var DESTINO = "anwaycreativestudio@gmail.com";
-
-    document.querySelector(".contact-form").addEventListener("submit", function (evento) {
-      evento.preventDefault();
-      var datos = evento.target;
-      var asunto = "Consulta desde anwaycreativestudio.tech — " + datos.Servicio.value;
-      var cuerpo = [
-        "Nombre: " + datos.Nombre.value,
-        "Email: " + datos.Email.value,
-        "Servicio: " + datos.Servicio.value,
-        "",
-        datos.Mensaje.value || "(sin mensaje adicional)"
-      ].join("\n");
-
-      window.location.href =
-        "mailto:" + DESTINO +
-        "?subject=" + encodeURIComponent(asunto) +
-        "&body=" + encodeURIComponent(cuerpo);
-    });
-  </script>
 </body>
 </html>
