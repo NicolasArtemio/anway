@@ -737,3 +737,72 @@ body:has(.hero.has-laptop) .main-nav { opacity: 0; visibility: hidden; }
   .tool-item > span:nth-child(2) { font-size: 12px; }
   .contact-copy .pill { display: inline-block; }
 }
+
+/* Contraste AA */
+:root {
+  --gold-text: #7A6232;    /* acento dorado legible sobre marfil, ~4.7:1 */
+  --muted-strong: #5A5F57; /* gris para texto chico sobre marfil, ~5.3:1 */
+  --gold-line: #8A7C60;    /* bordes de iconos, ~3.3:1 */
+}
+
+/* 2. Dorado claro -> dorado legible sobre marfil */
+.card-link span,
+.step-symbol,
+.service-card li::before,
+.about-area > span,
+.tool-mark { color: var(--gold-text); }
+
+/* 3. Grises -> muted-strong sobre marfil */
+.intro-index,
+.panel-kicker,
+.briefing-contact > span,
+.briefing-contact .contact-alt,
+.about-area p,
+.tool-item small,
+.tools-heading > p:last-child { color: var(--muted-strong); }
+
+/* 4. Pisos de tamaño (nada por debajo de 12px) */
+.tool-item small,
+.mock-project-meta,
+.visual-caption,
+.briefing-contact > span,
+.briefing-contact .contact-alt a { font-size: 12px; }
+.visual-index { font-size: 12px; }
+/* Regla "nada < 12px": estos dos textos sobre marfil estaban en 9-11px */
+.intro-index,
+.panel-kicker { font-size: 12px; }
+
+/* 6. Borde de íconos de servicio */
+.service-icon { border-color: var(--gold-line); }
+
+/* 7. Visual BAS */
+.visual-bas { background: #5A6F5C; color: #F5EFE6; }
+
+/* 8. Botón WhatsApp: verde legible con texto blanco */
+.button-wa { background: #11803F; color: #fff; }
+.button-wa:hover,
+.button-wa:focus-visible { background: #0E6B34; color: #fff; }
+.button-wa:hover,
+.button-wa:focus-visible { box-shadow: 0 6px 18px rgba(17, 128, 63, .45); }
+@keyframes wa-pulse {
+  0%, 100% { box-shadow: 0 2px 8px rgba(17, 128, 63, .30); }
+  50%      { box-shadow: 0 4px 14px rgba(17, 128, 63, .42); }
+}
+
+/* 9. Foco visible */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible { outline: 3px solid #8A6D3B; }
+.section-dark a:focus-visible,
+.section-dark button:focus-visible,
+.section-dark input:focus-visible,
+.section-dark select:focus-visible,
+.section-dark textarea:focus-visible { outline-color: #DCC8A6; }
+
+/* 10. Cascada: misma especificidad que .contact-panel > p.contact-alt, pero después */
+.contact-panel > p.contact-alt {
+  color: var(--muted-strong);
+  font-size: 12px;
+}
