@@ -24,6 +24,28 @@
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 </head>
 <body>
+<svg width="0" height="0" style="display:none" aria-hidden="true" focusable="false">
+  <symbol id="i-app-window" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M10 4v4"/><path d="M2 8h20"/><path d="M6 4v4"/></symbol>
+  <symbol id="i-layout-dashboard" viewBox="0 0 24 24"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></symbol>
+  <symbol id="i-workflow" viewBox="0 0 24 24"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></symbol>
+  <symbol id="i-messages-square" viewBox="0 0 24 24"><path d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/><path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1"/></symbol>
+  <symbol id="i-chart-no-axes-combined" viewBox="0 0 24 24"><path d="M12 16v5"/><path d="M16 14.639V21"/><path d="M20 10.656V21"/><path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"/><path d="M4 18.463V21"/><path d="M8 14.656V21"/></symbol>
+  <symbol id="i-gallery-horizontal" viewBox="0 0 24 24"><path d="M2 3v18"/><rect width="12" height="18" x="6" y="3" rx="2"/><path d="M22 3v18"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></symbol>
+  <symbol id="i-message-circle" viewBox="0 0 24 24"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></symbol>
+  <symbol id="i-sliders-horizontal" viewBox="0 0 24 24"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></symbol>
+  <symbol id="i-clipboard-list" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></symbol>
+  <symbol id="i-code-xml" viewBox="0 0 24 24"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></symbol>
+  <symbol id="i-refresh-cw" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+  <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
+  <symbol id="i-file-text" viewBox="0 0 24 24"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></symbol>
+  <symbol id="si-trello" viewBox="0 0 24 24"><path d="M21.147 0H2.853A2.86 2.86 0 000 2.853v18.294A2.86 2.86 0 002.853 24h18.294A2.86 2.86 0 0024 21.147V2.853A2.86 2.86 0 0021.147 0zM10.34 17.287a.953.953 0 01-.953.953h-4a.954.954 0 01-.954-.953V5.38a.953.953 0 01.954-.953h4a.954.954 0 01.953.953zm9.233-5.467a.944.944 0 01-.953.947h-4a.947.947 0 01-.953-.947V5.38a.953.953 0 01.953-.953h4a.954.954 0 01.953.953z"/></symbol>
+  <symbol id="si-notion" viewBox="0 0 24 24"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></symbol>
+  <symbol id="si-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+</svg>
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
 <header class="site-header">
 <div class="container nav-wrap">
@@ -37,7 +59,7 @@
 <a href="#proceso">Cómo trabajamos</a>
 <a href="#nosotros">Quiénes somos</a>
 <a href="#herramientas">Herramientas</a></nav>
-<a class="nav-cta" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
+<a class="nav-cta" href="#contacto">Hablemos <span aria-hidden="true"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></span></a>
 </div>
 </header>
 <main id="contenido">
@@ -61,13 +83,13 @@
 <h1>Ideas claras.<br/><em>Soluciones</em> digitales.</h1>
 <p class="hero-lead">Combinamos desarrollo web, marketing digital y creatividad para ayudar a negocios y emprendimientos de Olavarría y todo el país a construir una presencia profesional y crecer.</p>
 <div class="hero-actions">
-<a class="button button-light" href="#contacto">Hablemos de tu proyecto <span aria-hidden="true">↗</span></a>
-<a class="text-link text-link-light" href="#servicios">Conocé qué hacemos <span aria-hidden="true">↓</span></a>
+<a class="button button-light" href="#contacto">Hablemos de tu proyecto <span aria-hidden="true"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></span></a>
+<a class="text-link text-link-light" href="#servicios">Conocé qué hacemos <span aria-hidden="true"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-arrow-down"/></svg></span></a>
 </div>
 <div aria-label="Cómo trabajamos" class="hero-trust">
-<div class="trust-item"><span aria-hidden="true" class="trust-check">✓</span><span><strong>Web + gestión</strong><small>En una misma solución</small></span></div>
-<div class="trust-item"><span aria-hidden="true" class="trust-check">✓</span><span><strong>Atención directa</strong><small>Hablás con quien desarrolla</small></span></div>
-<div class="trust-item"><span aria-hidden="true" class="trust-check">✓</span><span><strong>Adaptado a tu negocio</strong><small>Sin soluciones genéricas</small></span></div>
+<div class="trust-item"><span class="trust-check"><svg class="icon trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-layers"/></svg></span><span><strong>Web + gestión</strong><small>En una misma solución</small></span></div>
+<div class="trust-item"><span class="trust-check"><svg class="icon trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-message-circle"/></svg></span><span><strong>Atención directa</strong><small>Hablás con quien desarrolla</small></span></div>
+<div class="trust-item"><span class="trust-check"><svg class="icon trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-sliders-horizontal"/></svg></span><span><strong>Adaptado a tu negocio</strong><small>Sin soluciones genéricas</small></span></div>
 </div>
 </div>
 </div>
@@ -104,25 +126,25 @@
 <h3 class="service-group-title">Desarrollo web y tecnología</h3>
 <div class="service-grid">
 <article class="service-card">
-<div class="service-top"><span class="service-number">01</span><span aria-hidden="true" class="service-icon icon-window"><i></i></span></div>
+<div class="service-top"><span class="service-number">01</span><span aria-hidden="true" class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-app-window"/></svg></span></div>
 <h4>Desarrollo web</h4>
 <p>Sitios rápidos, claros y adaptables que presentan tu negocio con profesionalismo y convierten visitas en oportunidades.</p>
 <ul><li>Webs institucionales</li><li>Landing pages</li><li>Catálogos digitales</li></ul>
-<a class="card-link" href="#contacto">Pedir presupuesto de web <span aria-hidden="true">↗</span></a>
+<a class="card-link" href="#contacto">Pedir presupuesto de web <span aria-hidden="true"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></span></a>
 </article>
 <article class="service-card">
-<div class="service-top"><span class="service-number">02</span><span aria-hidden="true" class="service-icon icon-grid"><i></i><i></i><i></i><i></i></span></div>
+<div class="service-top"><span class="service-number">02</span><span aria-hidden="true" class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-layout-dashboard"/></svg></span></div>
 <h4>Sistemas a medida</h4>
 <p>Aplicaciones que ordenan procesos, centralizan información y te ayudan a tomar mejores decisiones.</p>
 <ul><li>Stock y ventas</li><li>Paneles de administración</li><li>Gestión de clientes y pedidos</li></ul>
-<a class="card-link" href="#contacto">Pedir presupuesto de sistema <span aria-hidden="true">↗</span></a>
+<a class="card-link" href="#contacto">Pedir presupuesto de sistema <span aria-hidden="true"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></span></a>
 </article>
 <article class="service-card">
-<div class="service-top"><span class="service-number">03</span><span aria-hidden="true" class="service-icon icon-flow"><i></i><i></i><i></i></span></div>
+<div class="service-top"><span class="service-number">03</span><span aria-hidden="true" class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-workflow"/></svg></span></div>
 <h4>Soluciones digitales</h4>
 <p>Mejoras y herramientas que conectan tus tareas cotidianas para que puedas dedicar tiempo a lo importante.</p>
 <ul><li>Automatización de tareas</li><li>Integraciones</li><li>Mejora de procesos</li></ul>
-<a class="card-link" href="#contacto">Pedir presupuesto de automatización <span aria-hidden="true">↗</span></a>
+<a class="card-link" href="#contacto">Pedir presupuesto de automatización <span aria-hidden="true"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></span></a>
 </article>
 </div>
 </div>
@@ -130,25 +152,25 @@
 <h3 class="service-group-title">Marketing y redes sociales</h3>
 <div class="service-grid">
 <article class="service-card">
-<div class="service-top"><span class="service-number">04</span><span aria-hidden="true" class="service-icon icon-community"><i></i><i></i><i></i></span></div>
+<div class="service-top"><span class="service-number">04</span><span aria-hidden="true" class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-messages-square"/></svg></span></div>
 <h4>Community Management</h4>
 <p>Gestión de redes, planificación de publicaciones y comunicación con tu comunidad.</p>
 <ul><li>Planificación de publicaciones</li><li>Comunicación con la comunidad</li><li>Seguimiento de la cuenta</li></ul>
-<a class="card-link" href="#contacto">Consultar por redes <span aria-hidden="true">↗</span></a>
+<a class="card-link" href="#contacto">Consultar por redes <span aria-hidden="true"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></span></a>
 </article>
 <article class="service-card">
-<div class="service-top"><span class="service-number">05</span><span aria-hidden="true" class="service-icon icon-chart"><i></i><i></i><i></i></span></div>
+<div class="service-top"><span class="service-number">05</span><span aria-hidden="true" class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-chart-no-axes-combined"/></svg></span></div>
 <h4>Social Media Management</h4>
 <p>Estrategia, objetivos, calendario de contenido y análisis de resultados.</p>
 <ul><li>Estrategia de redes</li><li>Objetivos y calendario</li><li>Análisis de métricas</li></ul>
-<a class="card-link" href="#contacto">Consultar por redes <span aria-hidden="true">↗</span></a>
+<a class="card-link" href="#contacto">Consultar por redes <span aria-hidden="true"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></span></a>
 </article>
 <article class="service-card">
-<div class="service-top"><span class="service-number">06</span><span aria-hidden="true" class="service-icon icon-frame"></span></div>
+<div class="service-top"><span class="service-number">06</span><span aria-hidden="true" class="service-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-gallery-horizontal"/></svg></span></div>
 <h4>Diseño de contenido</h4>
 <p>Publicaciones, historias, carruseles y piezas visuales para comunicar con identidad.</p>
 <ul><li>Publicaciones e historias</li><li>Carruseles</li><li>Piezas de comunicación</li></ul>
-<a class="card-link" href="#contacto">Consultar por contenido <span aria-hidden="true">↗</span></a>
+<a class="card-link" href="#contacto">Consultar por contenido <span aria-hidden="true"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></span></a>
 </article>
 </div>
 </div>
@@ -198,10 +220,10 @@
 <p class="section-description">Sin vueltas ni tecnicismos innecesarios. Trabajamos en etapas claras, con comunicación directa y objetivos compartidos.</p>
 </div>
 <div class="process-list">
-<article class="process-step"><span class="step-no">01</span><div><h3>Nos conocemos</h3><p>Conversamos sobre tu negocio, tus necesidades y tus objetivos.</p></div><span aria-hidden="true" class="step-symbol">↘</span></article>
-<article class="process-step"><span class="step-no">02</span><div><h3>Analizamos y planificamos</h3><p>Definimos el alcance, la propuesta, los plazos y el presupuesto.</p></div><span aria-hidden="true" class="step-symbol">↘</span></article>
-<article class="process-step"><span class="step-no">03</span><div><h3>Creamos y desarrollamos</h3><p>Diseñamos el sitio web, los contenidos o las soluciones acordadas.</p></div><span aria-hidden="true" class="step-symbol">↘</span></article>
-<article class="process-step"><span class="step-no">04</span><div><h3>Revisamos y optimizamos</h3><p>Ajustamos las entregas y, en servicios continuos, analizamos resultados.</p></div><span aria-hidden="true" class="step-symbol">↗</span></article>
+<article class="process-step"><span class="step-no">01</span><div><h3>Nos conocemos</h3><p>Conversamos sobre tu negocio, tus necesidades y tus objetivos.</p></div><span aria-hidden="true" class="step-symbol"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-message-circle"/></svg></span></article>
+<article class="process-step"><span class="step-no">02</span><div><h3>Analizamos y planificamos</h3><p>Definimos el alcance, la propuesta, los plazos y el presupuesto.</p></div><span aria-hidden="true" class="step-symbol"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-clipboard-list"/></svg></span></article>
+<article class="process-step"><span class="step-no">03</span><div><h3>Creamos y desarrollamos</h3><p>Diseñamos el sitio web, los contenidos o las soluciones acordadas.</p></div><span aria-hidden="true" class="step-symbol"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-code-xml"/></svg></span></article>
+<article class="process-step"><span class="step-no">04</span><div><h3>Revisamos y optimizamos</h3><p>Ajustamos las entregas y, en servicios continuos, analizamos resultados.</p></div><span aria-hidden="true" class="step-symbol"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-refresh-cw"/></svg></span></article>
 </div>
 </div>
 </section>
@@ -236,10 +258,10 @@
 <p>Planificamos, organizamos y desarrollamos cada proyecto con procesos claros.</p>
 </div>
 <div aria-label="Herramientas de trabajo" class="tools-list">
-<div class="tool-item"><span class="tool-mark">T</span><span>Trello</span></div>
-<div class="tool-item"><span class="tool-mark">N</span><span>Notion</span></div>
-<div class="tool-item"><span class="tool-mark">C</span><span>Canva</span><small>INCORPORACIÓN PREVISTA</small></div>
-<div class="tool-item"><span class="tool-mark">&lt;/&gt;</span><span>Herramientas de desarrollo web</span><small>A CONFIRMAR</small></div>
+<div class="tool-item"><span class="tool-mark" aria-hidden="true"><svg class="icon icon-lg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><use href="#si-trello"/></svg></span><span>Trello</span></div>
+<div class="tool-item"><span class="tool-mark" aria-hidden="true"><svg class="icon icon-lg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><use href="#si-notion"/></svg></span><span>Notion</span></div>
+<div class="tool-item"><span class="tool-mark" aria-hidden="true">C</span><span>Canva</span><small>INCORPORACIÓN PREVISTA</small></div>
+<div class="tool-item"><span class="tool-mark" aria-hidden="true"><svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-code-xml"/></svg></span><span>Herramientas de desarrollo web</span><small>A CONFIRMAR</small></div>
 </div>
 </div>
 </section>
@@ -256,11 +278,11 @@
 <span class="panel-kicker">CONTANOS SOBRE TU NEGOCIO</span>
 <h3>Contanos sobre tu negocio.</h3>
 <p>Completá nuestro briefing para que podamos entender tus objetivos y preparar una propuesta personalizada.</p>
-<a class="button button-light briefing-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdzKga26gTG7RnB1KdiBRv0ugkC_xPIr8bdsu8ROv3Hw_Lbeg/viewform" rel="noopener" target="_blank">Completar briefing <span aria-hidden="true">↗</span></a>
+<a class="button button-light briefing-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdzKga26gTG7RnB1KdiBRv0ugkC_xPIr8bdsu8ROv3Hw_Lbeg/viewform" rel="noopener" target="_blank"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-file-text"/></svg>Completar briefing <span aria-hidden="true"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></span></a>
 <div class="briefing-contact">
 <span>¿Preferís hablar directamente?</span>
-<a class="button button-wa" href="https://wa.me/5492284616657?text=Hola%20ANWAY%2C%20quiero%20consultar%20por%20un%20proyecto" rel="noopener" target="_blank">Escribinos por WhatsApp <span aria-hidden="true">↗</span></a>
-<p class="contact-alt">o por mail a <a href="mailto:anwaycreativestudio@gmail.com">anwaycreativestudio@gmail.com</a></p>
+<a class="button button-wa" href="https://wa.me/5492284616657?text=Hola%20ANWAY%2C%20quiero%20consultar%20por%20un%20proyecto" rel="noopener" target="_blank"><svg class="icon wa-logo" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><use href="#si-whatsapp"/></svg>Escribinos por WhatsApp <span aria-hidden="true"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></span></a>
+<p class="contact-alt">o por mail a <a href="mailto:anwaycreativestudio@gmail.com"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg>anwaycreativestudio@gmail.com</a></p>
 </div>
 </div>
 </div>
@@ -273,7 +295,7 @@
 <span class="brand-caption">CREATIVE STUDIO</span>
 </a>
 <p>Tecnología y comunicación,<br/>una misma visión.</p>
-<a class="back-top" href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a>
+<a class="back-top" href="#inicio">Volver arriba <span aria-hidden="true"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-arrow-up"/></svg></span></a>
 </div>
 <div class="container footer-bottom">
 <span>© 2026 ANWAY Creative Studio. Todos los derechos reservados.</span>

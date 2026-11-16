@@ -78,7 +78,7 @@ h1 em, .work h2 em, .contact h2 em { color: var(--champagne); font-family: var(-
 /* Hero — confianza + mockup de notebook (reemplaza el arte abstracto) */
 .hero-trust { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 37px; padding-top: 20px; border-top: 1px solid rgba(240,231,219,.15); }
 .trust-item { display: flex; align-items: flex-start; gap: 8px; min-width: 0; }
-.trust-check { display: grid; place-items: center; flex: 0 0 17px; width: 17px; height: 17px; border: 1px solid rgba(220,200,166,.65); border-radius: 50%; color: var(--champagne); font-size: 12px; }
+.trust-check { display: grid; place-items: center; flex: 0 0 17px; width: 17px; height: 17px; border: 1px solid rgba(220,200,166,.65); border-radius: 50%; color: var(--champagne); }
 .trust-item strong, .trust-item small { display: block; }
 .trust-item strong { margin-bottom: 5px; color: var(--ivory); font-size: 12px; font-weight: 600; line-height: 1.35; }
 .trust-item small { color: rgba(240,231,219,.68); font-size: 12px; line-height: 1.45; }
@@ -133,14 +133,6 @@ h2 span { color: #8D958C; font-family: var(--serif); font-weight: 400; letter-sp
 .service-top { display: flex; width: 100%; align-items: center; justify-content: space-between; margin-bottom: 35px; }
 .service-number { color: #8C8D83; font-size: 10px; letter-spacing: .14em; }
 .service-icon { position: relative; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid #C5B89F; color: var(--green); }
-.icon-window::before { content: ""; width: 21px; height: 16px; border: 1px solid currentColor; }
-.icon-window::after { content: ""; position: absolute; top: 17px; width: 21px; border-top: 1px solid currentColor; }
-.icon-window i { position: absolute; top: 12px; left: 14px; width: 2px; height: 2px; border-radius: 50%; background: currentColor; }
-.icon-grid { grid-template-columns: repeat(2, 5px); grid-template-rows: repeat(2, 5px); gap: 4px; }
-.icon-grid i { width: 5px; height: 5px; border: 1px solid currentColor; }
-.icon-flow { display: flex; gap: 3px; }
-.icon-flow i { width: 6px; height: 17px; border: 1px solid currentColor; transform: skewY(-28deg); }
-.icon-flow i:nth-child(2) { height: 25px; }
 .service-card h4 { margin-bottom: 12px; font-family: var(--display); font-size: 20px; font-weight: 600; letter-spacing: -.04em; }
 .service-card > p { max-width: 300px; margin-bottom: 18px; color: #707269; font-size: 12px; line-height: 1.8; }
 .service-card ul { display: grid; gap: 7px; margin: 0 0 25px; padding: 0; list-style: none; color: #565B54; font-size: 11px; }
@@ -152,15 +144,6 @@ h2 span { color: #8D958C; font-family: var(--serif); font-weight: 400; letter-sp
 /* Service groups */
 .service-group + .service-group { margin-top: 58px; }
 .service-group-title { margin: 0; padding-bottom: 16px; color: #6D7068; font-family: var(--display); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
-.icon-community { grid-template-columns: repeat(3, 6px); gap: 3px; }
-.icon-community i { width: 6px; height: 6px; border: 1px solid currentColor; border-radius: 50%; }
-.icon-chart { display: flex; align-items: flex-end; gap: 3px; }
-.icon-chart i { width: 5px; height: 12px; border: 1px solid currentColor; }
-.icon-chart i:nth-child(2) { height: 18px; }
-.icon-chart i:nth-child(3) { height: 24px; }
-.icon-frame::before { content: ""; width: 20px; height: 15px; border: 1px solid currentColor; }
-.icon-frame::after { content: ""; position: absolute; width: 8px; height: 8px; border-top: 1px solid currentColor; border-right: 1px solid currentColor; transform: translate(5px, -4px) rotate(45deg); }
-
 /* Projects */
 .work { padding: 104px 0 98px; overflow: hidden; }
 .work-heading { align-items: flex-end; margin-bottom: 58px; }
@@ -225,7 +208,7 @@ h2 span { color: #8D958C; font-family: var(--serif); font-weight: 400; letter-sp
 .step-no { align-self: start; padding-top: 4px; color: #8B9186; font-family: var(--serif); font-size: 22px; }
 .process-step h3 { margin-bottom: 7px; font-family: var(--display); font-size: 18px; font-weight: 600; letter-spacing: -.035em; }
 .process-step p { max-width: 610px; margin: 0; color: #707269; font-size: 12px; line-height: 1.8; }
-.step-symbol { justify-self: end; color: #9B8B6D; font-size: 23px; }
+.step-symbol { justify-self: end; color: #9B8B6D; }
 
 /* About */
 .about { padding: 104px 0 108px; background: #EDE6D9; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -310,7 +293,7 @@ h2 span { color: #8D958C; font-family: var(--serif); font-weight: 400; letter-sp
   .button { min-height: 49px; padding-inline: 15px; gap: 17px; font-size: 11px; }
   .hero-trust { gap: 10px; margin-top: 27px; padding-top: 17px; }
   .trust-item { gap: 6px; }
-  .trust-check { flex-basis: 15px; width: 15px; height: 15px; font-size: 12px; }
+  .trust-check { flex-basis: 15px; width: 15px; height: 15px; }
   .hero-art { width: min(100%, 500px); margin: 0 auto; padding: 5px 8px 18px 0; transform: none; }
   .mock-site { min-height: 0; padding: 15px 13px; }
   .mock-intro { padding-top: 16px; }
@@ -362,7 +345,6 @@ h2 span { color: #8D958C; font-family: var(--serif); font-weight: 400; letter-sp
   .step-no { font-size: 19px; }
   .process-step h3 { font-size: 16px; }
   .process-step p { font-size: 11px; }
-  .step-symbol { font-size: 18px; }
   .contact { padding: 76px 0 75px; }
   .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .contact-copy { padding-top: 0; }
@@ -806,3 +788,20 @@ textarea:focus-visible { outline: 3px solid #8A6D3B; }
   color: var(--muted-strong);
   font-size: 12px;
 }
+
+/* Iconos SVG */
+.icon { width: 22px; height: 22px; flex: none; }
+.icon-sm { width: 16px; height: 16px; flex: none; }
+.icon-lg { width: 24px; height: 24px; flex: none; }
+.trust-icon { width: 14px; height: 14px; }
+.wa-logo { width: 18px; height: 18px; }
+
+/* Alineación icono + texto sin tocar layouts */
+.card-link span,
+.text-link span,
+.nav-cta span,
+.back-top span,
+.button span { display: inline-flex; align-items: center; }
+.briefing-button,
+.button-wa { display: inline-flex; align-items: center; }
+.contact-alt a { display: inline-flex; align-items: center; gap: 6px; }
