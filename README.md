@@ -1,21 +1,22 @@
-# ANWAY — landing con transición de notebook al hacer scroll
+# ANWAY Creative Studio — versión unificada
 
-Versión experimental de la landing de ANWAY basada en HTML, CSS y JavaScript nativo.
+Landing que integra el proyecto original (diseño, estructura y experiencia 3D del hero) con el contenido del mockup de propuesta.
 
-## Qué cambia
-- En escritorio, la escena del hero permanece fija durante un tramo del scroll.
-- La tapa de la notebook se abre progresivamente, el contenido de la pantalla revela una miniatura de la propia landing de ANWAY y la escena se acerca.
-- Al terminar el tramo, la página continúa con sus secciones originales.
-- En móvil se desactiva la apertura 3D para priorizar legibilidad y rendimiento.
-- Se respeta `prefers-reduced-motion`.
+## Archivos
+- `index.html`: estructura, contenido y comportamiento.
+- `styles.css`: estilos originales y extensiones para la nueva versión.
+- `og.png`: imagen Open Graph original.
 
-## Cómo probar
-Abrí `index.html` con Live Server en VS Code y desplazate lentamente por el hero.
-
-## Importante sobre el efecto 3D
-Esta es una primera implementación visual usando transformaciones 3D de CSS; **no utiliza todavía un modelo 3D real `.glb`**. Es útil para validar el ritmo y la experiencia. Para un resultado cinematográfico más realista, el siguiente paso sería sustituir la tapa CSS por un modelo articulado con Three.js y sincronizar la bisagra y cámara con el scroll.
+## Probar
+Abrir `index.html` con Live Server o servir la carpeta desde un servidor local.
 
 ## Antes de publicar
-- Sustituí el número de WhatsApp de ejemplo y el email.
-- Probá la experiencia en distintos navegadores y dispositivos.
-- Verificá que la transición no afecte la accesibilidad ni el rendimiento.
+1. Reemplazar `contacto@tudominio.com` por el correo definitivo en el HTML y en el script.
+2. Reemplazar `54XXXXXXXXXX` por el WhatsApp real.
+3. Confirmar autorización para mostrar Vial San Javier y Nancy Gortari; hasta entonces se marcan como pendientes.
+4. Revisar el alcance real de la experiencia AMERÍ y describirla con precisión.
+5. Reemplazar las representaciones visuales de portfolio por capturas y piezas autorizadas.
+6. Confirmar las herramientas de trabajo y si Canva ya está incorporada.
+7. Revisar el formulario/briefing en distintos clientes de correo: utiliza `mailto`, no almacena ni envía datos a un servidor.
+
+El briefing es una versión breve integrada al sitio. El mockup original solo proponía un botón “Completar briefing”; no incluía preguntas ni un formulario detallado.

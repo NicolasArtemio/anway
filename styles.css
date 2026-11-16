@@ -61,7 +61,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .eyebrow { display: flex; align-items: center; gap: 12px; margin: 0 0 24px; color: var(--champagne); font-size: 10px; font-weight: 600; letter-spacing: .19em; line-height: 1.5; }
 .eyebrow-line { display: inline-block; width: 28px; height: 1px; background: currentColor; }
 .eyebrow-dark { color: #69736B; }
-h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3, h4, p { margin-top: 0; }
 h1, h2 { font-family: var(--display); font-weight: 500; letter-spacing: -.065em; line-height: 1.04; }
 h1 { max-width: 650px; margin-bottom: 26px; font-size: clamp(48px, 6.4vw, 82px); }
 h1 em, .work h2 em, .contact h2 em { color: var(--champagne); font-family: var(--serif); font-weight: 400; letter-spacing: -.045em; }
@@ -141,13 +141,25 @@ h2 span { color: #8D958C; font-family: var(--serif); font-weight: 400; letter-sp
 .icon-flow { display: flex; gap: 3px; }
 .icon-flow i { width: 6px; height: 17px; border: 1px solid currentColor; transform: skewY(-28deg); }
 .icon-flow i:nth-child(2) { height: 25px; }
-.service-card h3 { margin-bottom: 12px; font-family: var(--display); font-size: 20px; font-weight: 600; letter-spacing: -.04em; }
+.service-card h4 { margin-bottom: 12px; font-family: var(--display); font-size: 20px; font-weight: 600; letter-spacing: -.04em; }
 .service-card > p { max-width: 300px; margin-bottom: 18px; color: #707269; font-size: 12px; line-height: 1.8; }
 .service-card ul { display: grid; gap: 7px; margin: 0 0 25px; padding: 0; list-style: none; color: #565B54; font-size: 11px; }
 .service-card li::before { content: "—"; margin-right: 8px; color: #9B8B6D; }
 .card-link { display: inline-flex; align-items: center; gap: 15px; margin-top: auto; font-size: 11px; font-weight: 700; }
 .card-link span { color: #9B8B6D; font-size: 16px; transition: transform .2s ease; }
 .card-link:hover span { transform: translate(3px, -3px); }
+
+/* Service groups */
+.service-group + .service-group { margin-top: 58px; }
+.service-group-title { margin: 0; padding-bottom: 16px; color: #6D7068; font-family: var(--display); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.icon-community { grid-template-columns: repeat(3, 6px); gap: 3px; }
+.icon-community i { width: 6px; height: 6px; border: 1px solid currentColor; border-radius: 50%; }
+.icon-chart { display: flex; align-items: flex-end; gap: 3px; }
+.icon-chart i { width: 5px; height: 12px; border: 1px solid currentColor; }
+.icon-chart i:nth-child(2) { height: 18px; }
+.icon-chart i:nth-child(3) { height: 24px; }
+.icon-frame::before { content: ""; width: 20px; height: 15px; border: 1px solid currentColor; }
+.icon-frame::after { content: ""; position: absolute; width: 8px; height: 8px; border-top: 1px solid currentColor; border-right: 1px solid currentColor; transform: translate(5px, -4px) rotate(45deg); }
 
 /* Projects */
 .work { padding: 104px 0 98px; overflow: hidden; }
@@ -215,6 +227,17 @@ h2 span { color: #8D958C; font-family: var(--serif); font-weight: 400; letter-sp
 .process-step p { max-width: 610px; margin: 0; color: #707269; font-size: 12px; line-height: 1.8; }
 .step-symbol { justify-self: end; color: #9B8B6D; font-size: 23px; }
 
+/* About */
+.about { padding: 104px 0 108px; background: #EDE6D9; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.about-grid { display: grid; grid-template-columns: .9fr 1.35fr; gap: clamp(36px, 6vw, 80px); align-items: start; }
+.about-head .eyebrow { margin-bottom: 22px; }
+.about-lead { max-width: 560px; margin-bottom: 34px; color: #666A62; font-size: 14px; line-height: 1.9; }
+.about-areas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; padding-top: 28px; border-top: 1px solid var(--line); }
+.about-area > span { display: block; margin-bottom: 10px; color: #9B8B6D; font-size: 10px; letter-spacing: .14em; }
+.about-area h3 { margin-bottom: 9px; font-family: var(--display); font-size: 16px; font-weight: 600; letter-spacing: -.03em; }
+.about-area p { margin: 0; color: #707269; font-size: 12px; line-height: 1.8; }
+.about-note { max-width: 620px; margin: 30px 0 0; color: #565B54; font-family: var(--serif); font-size: 17px; font-style: italic; line-height: 1.65; }
+
 /* Contact */
 .contact { position: relative; overflow: hidden; padding: 105px 0 110px; }
 .contact-glow { position: absolute; width: 600px; height: 600px; top: -230px; left: -200px; border: 1px solid rgba(220,200,166,.1); border-radius: 50%; box-shadow: 0 0 0 70px rgba(220,200,166,.025), 0 0 0 140px rgba(220,200,166,.02); pointer-events: none; }
@@ -267,6 +290,7 @@ h2 span { color: #8D958C; font-family: var(--serif); font-weight: 400; letter-sp
   .property-layout, .system-window { width: 90%; }
   .contact-grid { gap: 45px; }
   .contact-panel { padding: 26px; }
+  .about-grid { grid-template-columns: 1fr; gap: 28px; }
 }
 @media (max-width: 680px) {
   html { scroll-padding-top: 20px; }
@@ -312,9 +336,15 @@ h2 span { color: #8D958C; font-family: var(--serif); font-weight: 400; letter-sp
   .service-card, .service-card:first-child, .service-card:last-child { min-height: 0; padding: 25px 0 27px; border-right: 0; border-bottom: 1px solid var(--line); }
   .service-card:last-child { border-bottom: 0; }
   .service-top { margin-bottom: 22px; }
-  .service-card h3 { font-size: 19px; }
+  .service-card h4 { font-size: 19px; }
   .service-card > p { max-width: 440px; }
   .service-card ul { margin-bottom: 22px; }
+  .service-group + .service-group { margin-top: 40px; }
+  .service-group-title { padding-bottom: 12px; font-size: 10px; }
+  .about { padding: 76px 0 78px; }
+  .about-lead { font-size: 13px; }
+  .about-areas { grid-template-columns: 1fr; gap: 22px; }
+  .about-note { font-size: 15px; }
   .work { padding: 76px 0 68px; }
   .work-heading { margin-bottom: 37px; }
   .project-list { gap: 50px; }
@@ -379,7 +409,7 @@ body { font-size: 16px; }
 .intro-index { font-size: 11px; }
 .section-description { font-size: 15px; color: #4F544C; }
 .service-number { font-size: 12px; }
-.service-card h3 { font-size: 22px; }
+.service-card h4 { font-size: 22px; }
 .service-card > p { font-size: 15px; color: #4F544C; max-width: 340px; }
 .service-card ul { font-size: 14px; color: #3F443D; }
 .project-meta { font-size: 11px; }
@@ -602,3 +632,16 @@ body:has(.hero.has-laptop) .main-nav { opacity: 0; visibility: hidden; }
    El degradé arranca donde el arco entra en pantalla (280px / 350px desde el tope de cada círculo). */
 .has-laptop .orb-one { -webkit-mask-image: linear-gradient(to bottom, transparent 280px, #000 440px); mask-image: linear-gradient(to bottom, transparent 280px, #000 440px); }
 .has-laptop .orb-two { -webkit-mask-image: linear-gradient(to bottom, transparent 350px, #000 510px); mask-image: linear-gradient(to bottom, transparent 350px, #000 510px); }
+
+/* Nav con 4 secciones: evita desborde entre 681 y 900px y mantiene todos los links visibles en pantallas angostas.
+   Va al final a propósito: la escala tipográfica de arriba fija .main-nav a en 14px y ganaría por orden. */
+@media (max-width: 900px) {
+  .nav-wrap { gap: 12px; }
+  .main-nav { gap: 12px; flex-wrap: nowrap; white-space: nowrap; }
+  .main-nav a { font-size: 12px; white-space: nowrap; }
+  .nav-cta { padding: 10px 12px; font-size: 12px; }
+}
+@media (max-width: 680px) {
+  .main-nav { gap: 12px; flex-wrap: wrap; overflow: visible; white-space: normal; }
+  .main-nav a { font-size: 12px; white-space: nowrap; }
+}
