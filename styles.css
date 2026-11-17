@@ -600,6 +600,10 @@ h2 span { color: #6B746B; }
 body:has(.hero.has-laptop) .site-header { border-bottom-color: transparent; }
 body:has(.hero.has-laptop) .main-nav { opacity: 0; visibility: hidden; }
 
+/* Intro notebook: header limpio durante la intro 3D (solo mientras dura la intro). El home posterior conserva franja y arcos intactos. */
+.has-laptop.intro-active .hero-footer,
+.has-laptop.intro-active .hero-orb { display: none; }
+
 /* Móvil: la home dentro de la escena fija tiene que entrar completa */
 @media (max-width: 680px) {
   .has-laptop .hero-main .hero-grid { gap: 0; }

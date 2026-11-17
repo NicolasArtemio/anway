@@ -335,6 +335,8 @@
       const scene = new THREE.Scene();
       scene.environment = new THREE.PMREMGenerator(renderer).fromScene(new RoomEnvironment(), 0.04).texture;
       const key = new THREE.DirectionalLight(0xfff1dc, 2.0); key.position.set(3, 5, 4); scene.add(key);
+      // Rim rasante champagne: despega el contorno de la notebook del fondo sin cambiar el look
+      const rim = new THREE.DirectionalLight(0xdcc8a6, 0.35); rim.position.set(-3.0, 0.6, -2.4); scene.add(rim);
       const cam = new THREE.PerspectiveCamera(32, 1, 0.1, 50);
       const aniso = renderer.capabilities.getMaxAnisotropy();
 
@@ -462,6 +464,8 @@
         onUpdate: function () {
           need = true;
           if (progressFill) progressFill.style.transform = "scaleX(" + this.progress() + ")";
+          // Hook de estado: marca la intro activa hasta que termina el crossfade; el CSS oculta franja/arcos solo entonces. No altera la animación.
+          hero.classList.toggle("intro-active", this.progress() < 0.99);
         },
         scrollTrigger: { trigger: hero, start: function () { return "top " + siteHeader.offsetHeight + "px"; }, end: "+=320%", pin: stage, scrub: 0.25, anticipatePin: 1, invalidateOnRefresh: true }
       });
