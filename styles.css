@@ -813,3 +813,44 @@ textarea:focus-visible { outline: 3px solid #8A6D3B; }
 /* Velo marfil detrás de índice y caption para leer sobre cualquier capture */
 .visual-index,
 .visual-caption { background: rgba(240, 231, 219, .88); color: var(--green); padding: 2px 8px; }
+
+/* Hero: dashboard image */
+.hero-visual { width: 100%; }
+.hero-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 24px 64px rgba(0,0,0,.45), 0 0 0 1px rgba(220,200,166,.12);
+}
+
+/* Tablet: 768–1023px → 1 columna, imagen debajo del texto, max-width 720px centrada */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  .hero-copy { padding-bottom: 0; }
+  .hero-visual { max-width: 720px; }
+  .hero-trust { margin-top: 0; padding-top: 0; border-top: none; }
+}
+
+/* Mobile: <768px → 1 columna, imagen entre botones y trust bar */
+@media (max-width: 767px) {
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .hero-copy { padding-bottom: 0; }
+  .hero-visual { width: 100%; max-width: 100%; }
+  .hero-trust { margin-top: 0; padding-top: 0; border-top: none; }
+}
+
+/* Desktop ≥1024px: trust bar sigue en columna izq (row 2 col 1) como antes */
+@media (min-width: 1024px) {
+  .hero-trust { grid-column: 1; grid-row: 2; }
+}
