@@ -60,8 +60,44 @@
 <a href="#nosotros">Quiénes somos</a>
 <a href="#herramientas">Herramientas</a></nav>
 <a class="nav-cta" href="#contacto">Hablemos <span aria-hidden="true"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></span></a>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú" class="nav-toggle" type="button">
+  <svg aria-hidden="true" class="icon menu-icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  <svg aria-hidden="true" class="icon menu-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg>
+</button>
 </div>
+<nav aria-label="Navegación móvil" class="mobile-menu" id="mobile-menu">
+  <a href="#servicios">Servicios</a>
+  <a href="#proyectos">Proyectos</a>
+  <a href="#proceso">Cómo trabajamos</a>
+  <a href="#nosotros">Quiénes somos</a>
+  <a href="#herramientas">Herramientas</a>
+  <a class="mobile-menu-cta" href="#contacto">Hablemos <span aria-hidden="true"><svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"/></svg></span></a>
+</nav>
 </header>
+<script>
+      // Menú móvil: toggle, cierre por link/Escape y foco.
+      (function () {
+        var toggle = document.querySelector(".nav-toggle"), menu = document.getElementById("mobile-menu");
+        if (!toggle || !menu) return;
+        var firstLink = menu.querySelector("a");
+        function setOpen(open) {
+          toggle.setAttribute("aria-expanded", String(open));
+          toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+          menu.classList.toggle("is-open", open);
+        }
+        toggle.addEventListener("click", function () {
+          var open = toggle.getAttribute("aria-expanded") !== "true";
+          setOpen(open);
+          if (open) firstLink.focus();
+        });
+        menu.addEventListener("click", function (e) { if (e.target.closest("a")) setOpen(false); });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") { setOpen(false); toggle.focus(); }
+        });
+        var mq = matchMedia("(min-width: 768px)");
+        mq.addEventListener("change", function (e) { if (e.matches) setOpen(false); });
+      })();
+      </script>
 <main id="contenido">
 <section class="hero section-dark" id="inicio">
 <div aria-hidden="true" class="hero-orb orb-one"></div>
